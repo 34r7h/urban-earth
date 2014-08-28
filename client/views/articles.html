@@ -3,7 +3,12 @@
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Articles</strong></div>
         <div class="panel-body">
-            <p>Fold</p>
+            <input ng-model="test[0][0]">
+            {{test[0]}}
+            <div ng-repeat="test in test">
+                <div ng-repeat="test in test">
+            <input ng-model="test">
+                </div></div>
         </div>
     </section>
 

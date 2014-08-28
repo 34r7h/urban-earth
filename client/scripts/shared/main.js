@@ -1,13 +1,15 @@
 (function() {
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
-    '$scope', '$rootScope', function($scope, $rootScope) {
+    '$scope', '$rootScope', '$firebase', 'api', function($scope, $rootScope, $firebase, api) {
       var $window;
       $window = $(window);
       $scope.main = {
         brand: 'Masuk Metal',
         name: 'Lisa Doe'
       };
+		  $scope.test = api.showMe;
+
       $scope.pageTransitionOpts = [
         {
           name: 'Scale up',
@@ -73,7 +75,9 @@
         return $scope.taskRemainingCount = count;
       });
     }
-  ]).controller('DashboardCtrl', ['$scope', function($scope) {}]);
+  ]).controller('DashboardCtrl', ['$scope', function($scope) {
+
+  }]);
 
 }).call(this);
 
