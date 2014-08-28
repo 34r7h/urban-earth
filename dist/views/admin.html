@@ -1,0 +1,84 @@
+<div class="col-xs-12">
+    <h1>Site Admin</h1>
+    <div>
+        <div class="ui-tab-container  ui-tab-dark">
+            <tabset class="ui-tab">
+                <tab heading="Home">
+                    <div class="panel">Home</div>
+                </tab>
+                <tab heading="About">
+                    <div class="panel">About</div>
+                </tab>
+                <tab heading="Services">
+                    <div class="panel">
+                        <h2>New Service</h2>
+                        <input ng-model="serviceName" placeholder="Name of Service">
+                        <input ng-model="serviceImg"  placeholder="Image Url of Service">
+                        <input ng-model="serviceBenefits" placeholder="Benefits of Service">
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Service Description</strong></div>
+                            <div class="panel-body">
+                                <div text-angular="" ng-model="serviceDescription" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceDescription" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                </textarea>
+                            </div>
+                        </section>
+                        <input ng-model="serviceCost" placeholder="Starting Cost of Service">
+                        <button class="col-xs-12">Add New Service</button>
+                    </div>
+
+                </tab>
+
+                <tab heading="Client Work">
+                    <div class="panel">
+                        <h2>New Client</h2>
+                        <input type="text" ng-model="clientName"/>
+                        <input type="text" ng-model="clientImg"/>
+
+
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Client Description</strong></div>
+                            <div class="panel-body">
+                                <div text-angular="" ng-model="clientDescription" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="clientDescription" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                </textarea>
+                            </div>
+                        </section>
+                    </div>
+                </tab>
+                <tab heading="Articles">
+                    <div class="panel">
+                        <h2>New Article</h2>
+                        <div class="panel-heading">
+                            <strong><span class="glyphicon glyphicon-th"></span> Article Title</strong>
+                        </div>
+                        <div class="panel-body ng-scope">
+                            <input type="text" ng-model="articleTitle" placeholder="Article Title"/>
+                        </div>
+
+
+                        <section class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong><span class="glyphicon glyphicon-th"></span> Article Tags</strong>
+                            </div>
+                            <div class="panel-body ng-scope" data-ng-controller="TagsDemoCtrl">
+                                <tags-input ng-model="tags" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
+                            </div>
+                        </section>
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Article Body</strong></div>
+                            <div class="panel-body">
+                                <div text-angular="" ng-model="articleText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="articleText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                </textarea>
+                            </div>
+                        </section>
+                    </div>
+                </tab>
+                <tab heading="Media">
+                    <div class="panel">New Media</div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>
