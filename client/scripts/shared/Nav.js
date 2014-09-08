@@ -20,6 +20,7 @@
       };
     }
   ]).directive('collapseNav', [
+	  // TODO find how to collapse the nav
     function() {
       return {
         restrict: 'A',

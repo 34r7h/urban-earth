@@ -12,21 +12,34 @@
                 <tab heading="Services">
                     <div class="panel">
                         <h2>New Service</h2>
-                        <input ng-model="serviceName" placeholder="Name of Service">
-                        <input ng-model="serviceImg"  placeholder="Image Url of Service">
-                        <input ng-model="serviceBenefits" placeholder="Benefits of Service">
+                        <div class="panel-heading">
+                            <strong><span class="glyphicon glyphicon-th"></span> Service Title</strong>
+                        </div>
+                        <div class="panel-body ng-scope">
+                            <input type="text" ng-model="serviceTitle" placeholder="Service Title"/>
+                        </div>
+
+
+                        <section class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong><span class="glyphicon glyphicon-th"></span> Service Features</strong>
+                            </div>
+                            <div class="panel-body ng-scope">
+                                <tags-input ng-model="features" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
+                            </div>
+                        </section>
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Service Description</strong></div>
                             <div class="panel-body">
-                                <div text-angular="" ng-model="serviceDescription" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
-                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceDescription" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                <div text-angular="" ng-model="serviceText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                                 </textarea>
                             </div>
                         </section>
-                        <input ng-model="serviceCost" placeholder="Starting Cost of Service">
-                        <button class="col-xs-12">Add New Service</button>
+                        <section>
+                            <button ng-click="saveService(serviceTitle, features, serviceText)">Save</button>
+                        </section>
                     </div>
-
                 </tab>
 
                 <tab heading="Client Work">
@@ -61,7 +74,7 @@
                             <div class="panel-heading">
                                 <strong><span class="glyphicon glyphicon-th"></span> Article Tags</strong>
                             </div>
-                            <div class="panel-body ng-scope" data-ng-controller="TagsDemoCtrl">
+                            <div class="panel-body ng-scope">
                                 <tags-input ng-model="tags" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
                             </div>
                         </section>
@@ -72,6 +85,9 @@
                                 <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="articleText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                                 </textarea>
                             </div>
+                        </section>
+                        <section>
+                            <button ng-click="saveArticle(articleTitle, tags, articleText)">Save</button>
                         </section>
                     </div>
                 </tab>
