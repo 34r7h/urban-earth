@@ -3,12 +3,13 @@
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Articles</strong></div>
         <div class="panel-body">
-            <input ng-model="test[0][0]">
-            {{test[0]}}
-            <div ng-repeat="test in test">
-                <div ng-repeat="test in test">
-            <input ng-model="test">
-                </div></div>
+            <div ng-repeat="article in showMe">
+                <a ng-href="#/articles/{{article.articleURL}}">
+                    <h3>{{article.title}}</h3>
+                    <code ng-repeat="tag in article.tags">{{tag.text}}</code>
+                    <p ng-bind-html="article.body"></p>
+                </a>
+                </div>
         </div>
     </section>
 

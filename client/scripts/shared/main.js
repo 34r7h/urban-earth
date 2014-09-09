@@ -1,12 +1,25 @@
 (function() {
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
-    '$scope', '$rootScope', '$firebase', 'api', function($scope, $rootScope, $firebase, api) {
+    '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', function($scope, $rootScope, $firebase, api, $http, AWSControl) {
+	  $scope.msg = '';
+      $rootScope.mediaTitle = $scope.mediaTitle;
+	  console.log(AWSControl);
+	  $scope.fromservice = AWSControl.yeah; //no use
+	  $scope.myfile = {};
+	  $rootScope.$on('AWSUploadSuccess', function(){
+		  $scope.msg = 'Upload successful';
+		  $rootScope.mediaTitle = $scope.mediaTitle;
+	  });
+	  $rootScope.$on('AWSUploadError', function(){
+		  $scope.msg = 'Upload failed. Please retry';
+	  });
+
       var $window;
       $window = $(window);
       $scope.main = {
         brand: 'Masuk Metal',
-        name: 'Lisa Doe'
+        name: 'Bryce Masuk'
       };
 		  $scope.test = api.showMe;
 

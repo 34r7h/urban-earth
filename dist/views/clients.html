@@ -3,6 +3,19 @@
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Clients</strong></div>
         <div class="panel-body">
+            <div ng-repeat="client in showMe">
+                <a ng-href="#/clients/{{client.clientURL}}">
+                    <h3>{{client.title}}</h3>
+                    <code ng-repeat="feature in client.features">{{feature.text}}</code>
+                    <p ng-bind-html="client.description"></p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Clients</strong></div>
+        <div class="panel-body">
 
                     <div class="row">
                         <div class="col-sm-6">

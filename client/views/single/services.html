@@ -1,11 +1,16 @@
 <div class="page">
-    <div ui-view></div>
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Single Service</strong></div>
+        <div class="panel-heading">
+            <strong>
+                <h1 class="glyphicon glyphicon-th"> <span ng-bind-html="singleData.title"></span>
+                </h1>
+            </strong>
+        </div>
+
+        <p ng-bind-html="singleData.description"></p>
+        <span ng-repeat="feature in singleData.features">{{feature.text}} </span>
 
     </section>
-
-
 
 </div>

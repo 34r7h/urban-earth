@@ -2,20 +2,33 @@ angular.module('app.services', ['firebase'])
 	.factory('api', ['$firebase',
 		function($firebase) {
 			var api = {};
-			api.dbTables = ['about','services','clients','articles','media','contact'];
 			api.ref = {};
 			api.sync = {};
-			angular.forEach(api.dbTables, function(table){
 
-				//api.ref[table] = new Firebase("https://metal.firebaseio.com/"+table);
-				//api.sync[table] = $firebase(api.ref[table]);
-				//api.showMe = api.sync[table].$asArray();
-				//console.log(api.sync[table]);
-			    //api.sync[table].$push({name:'',imgUrl:'',description:''});
-				//return api.sync;
+			api.saveMedia = function(id, title){
+				api.media = new Firebase("https://metal.firebaseio.com/media");
+				api.sync.media = $firebase(api.media);
+				console.log(id + title);
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				api.sync.media.$update(id, {mediaTitle:title, mediaLink:link})
+			};
 
-			});
-			//api.test = api.showMe;
+			api.saveClient = function(title, features, description){
+				var clientURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				console.log(clientURL);
+				api.client = new Firebase("https://metal.firebaseio.com/clients");
+				api.sync.client = $firebase(api.client);
+				api.sync.client.$push({title:title,features:features,description:description,clientURL:clientURL}).then(function (client){
+					// console.log(client.name());
+					api.newID = client.name();
+					console.log(api.newID);
+
+					api.index = new Firebase("https://metal.firebaseio.com/index/clients");
+					api.sync.index = $firebase(api.index);
+					// title = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+					api.sync.index.$set(clientURL, api.newID);
+				});
+			};
 
 			api.saveService = function(title, features, description){
 				var serviceURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');

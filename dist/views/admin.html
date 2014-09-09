@@ -12,40 +12,69 @@
                 <tab heading="Services">
                     <div class="panel">
                         <h2>New Service</h2>
-                        <input ng-model="serviceName" placeholder="Name of Service">
-                        <input ng-model="serviceImg"  placeholder="Image Url of Service">
-                        <input ng-model="serviceBenefits" placeholder="Benefits of Service">
+                        <div class="panel-heading">
+                            <strong><span class="glyphicon glyphicon-th"></span> Service Title</strong>
+                        </div>
+                        <div class="panel-body ng-scope">
+                            <input type="text" ng-model="serviceTitle" placeholder="Service Title"/>
+                        </div>
+
+
+                        <section class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong><span class="glyphicon glyphicon-th"></span> Service Features</strong>
+                            </div>
+                            <div class="panel-body ng-scope">
+                                <tags-input ng-model="features" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
+                            </div>
+                        </section>
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Service Description</strong></div>
                             <div class="panel-body">
-                                <div text-angular="" ng-model="serviceDescription" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
-                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceDescription" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                <div text-angular="" ng-model="serviceText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                                 </textarea>
                             </div>
                         </section>
-                        <input ng-model="serviceCost" placeholder="Starting Cost of Service">
-                        <button class="col-xs-12">Add New Service</button>
+                        <section>
+                            <button ng-click="saveService(serviceTitle, features, serviceText)">Save</button>
+                        </section>
                     </div>
-
                 </tab>
 
-                <tab heading="Client Work">
+                <tab heading="Clients">
                     <div class="panel">
                         <h2>New Client</h2>
-                        <input type="text" ng-model="clientName"/>
-                        <input type="text" ng-model="clientImg"/>
+                        <div class="panel-heading">
+                            <strong><span class="glyphicon glyphicon-th"></span> Client Title</strong>
+                        </div>
+                        <div class="panel-body ng-scope">
+                            <input type="text" ng-model="clientTitle" placeholder="Client Title"/>
+                        </div>
 
 
                         <section class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong><span class="glyphicon glyphicon-th"></span> Client Features</strong>
+                            </div>
+                            <div class="panel-body ng-scope">
+                                <tags-input ng-model="features" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
+                            </div>
+                        </section>
+                        <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Client Description</strong></div>
                             <div class="panel-body">
-                                <div text-angular="" ng-model="clientDescription" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
-                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="clientDescription" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                <div text-angular="" ng-model="clientText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="clientText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                                 </textarea>
                             </div>
                         </section>
+                        <section>
+                            <button ng-click="saveClient(clientTitle, features, clientText)">Save</button>
+                        </section>
                     </div>
                 </tab>
+                
                 <tab heading="Articles">
                     <div class="panel">
                         <h2>New Article</h2>
@@ -55,13 +84,11 @@
                         <div class="panel-body ng-scope">
                             <input type="text" ng-model="articleTitle" placeholder="Article Title"/>
                         </div>
-
-
                         <section class="panel panel-default">
                             <div class="panel-heading">
                                 <strong><span class="glyphicon glyphicon-th"></span> Article Tags</strong>
                             </div>
-                            <div class="panel-body ng-scope" data-ng-controller="TagsDemoCtrl">
+                            <div class="panel-body ng-scope">
                                 <tags-input ng-model="tags" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
                             </div>
                         </section>
@@ -73,10 +100,19 @@
                                 </textarea>
                             </div>
                         </section>
+                        <section>
+                            <button ng-click="saveArticle(articleTitle, tags, articleText)">Save</button>
+                        </section>
                     </div>
                 </tab>
                 <tab heading="Media">
                     <div class="panel">New Media</div>
+                    <p>
+                        {{ msg }}
+                    </p>
+                    <h1 id="status"></h1>
+                    <p>From service: {{ fromservice }}</p>
+                    <uploader data-ng-model="myfile"></uploader>
                 </tab>
             </tabset>
         </div>

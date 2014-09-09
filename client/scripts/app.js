@@ -1,7 +1,48 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngSanitize','ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.router', 'easypiechart', 'textAngular', 'ui.tree', 'ngMap', 'ngTagsInput', 'app.controllers', 'app.services','app.directives', 'app.localization', 'app.nav', 'app.ui.ctrls', 'app.ui.directives', 'app.ui.services', 'app.ui.map', 'app.form.validation', 'app.ui.form.ctrls', 'app.ui.form.directives', 'app.tables', 'app.task', 'app.chart.ctrls', 'app.chart.directives', 'app.page.ctrls']).config([
-    '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  angular.module('app', [
+	  'ngSanitize',
+	  'ngRoute',
+	  'ngAnimate',
+	  'ui.bootstrap',
+	  'ui.router',
+	  'easypiechart',
+	  'textAngular',
+	  'ui.tree',
+	  'ngMap',
+	  'ngTagsInput',
+	  'app.controllers',
+	  'app.services',
+	  'app.directives',
+	  'app.localization',
+	  'app.nav',
+	  'app.ui.ctrls',
+	  'app.ui.directives',
+	  'app.ui.services',
+	  'app.ui.map',
+	  'app.form.validation',
+	  'app.ui.form.ctrls',
+	  'app.ui.form.directives',
+	  'app.tables',
+	  'app.task',
+	  'app.chart.ctrls',
+	  'app.chart.directives',
+	  'app.page.ctrls',
+	  'akoenig.deckgrid',
+      'uploader']).config([
+    '$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($stateProvider, $urlRouterProvider, AWSControlProvider) {
+
+		  var imageSupportParams = {
+			  type           : 'image.*',
+			  host           : 's3',
+			  Bucket         : 'masuk',
+			  accessKeyId    : 'AKIAIABNWCTWZ65JJV4A',
+			  secretAccessKey: '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',
+			  region         : 'us-west-2'
+
+		  };
+
+		  AWSControlProvider.supportType(imageSupportParams);
       var routes, setRoutes, routesSingles, setSingleRoutes;
       routes = ['home','about','services','clients','articles','media','admin', '404'];
       routesSingles = ['services','clients','articles','media'];
@@ -19,7 +60,12 @@
 		        $scope.api = api;
 		        $scope.saveArticle = api.saveArticle;
 		        $scope.saveService = api.saveService;
+		        $scope.saveClient = api.saveClient;
+		        $scope.saveMedia = api.saveMedia;
 		        $scope.tags = ['foo', 'bar'];
+		        $scope.urlFilter = function(url) {
+			        return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+		        };
 	        }
         };
         $stateProvider.state(state, config);
@@ -41,21 +87,12 @@
 				  var ref = new Firebase("https://metal.firebaseio.com/index/"+singleRoute+"/"+$scope.state.params[singleRoute]);
 				  ref.on('value', function (snapshot) {
 					  var itemID = snapshot.val();
-					  console.log('itemID = '+itemID);
 					  var itemRef = new Firebase("https://metal.firebaseio.com/"+singleRoute+"/"+itemID);
 					  var sync = $firebase(itemRef);
 					  $scope.singleData = sync.$asObject();
-					  console.log("params = "+ $scope.state.params[singleRoute]);
-					  console.log("itemRef = "+itemRef);
 				  }, function (errorObject) {
 					  console.log('The read failed: ' + errorObject.code);
 				  });
-				  //var sync = $firebase(ref);
-				  //console.log("params = "+ $scope.state.params[singleRoute]);
-				  //console.log("ref = "+ref);
-				  //console.log('itemID = '+$scope.itemID);
-				  //console.log("sync = "+sync.$asObject().$value);
-				  //$scope.singleData = sync.$asObject();
 			  }
 		  };
 		  $stateProvider.state(state, config);

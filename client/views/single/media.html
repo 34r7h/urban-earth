@@ -1,7 +1,15 @@
 <div class="page">
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Single Media</strong></div>
+        <div class="panel-heading">
+            <h3>
+                <div class="fa fa-camera-retro"> <span ng-bind-html="singleData.mediaTitle"></span>
+                </div>
+            </h3>
+        </div>
+        <img ng-src="{{singleData.mediaURL}}" width="100%">
+
+
 
     </section>
 

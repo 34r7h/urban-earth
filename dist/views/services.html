@@ -1,5 +1,19 @@
 <div class="page">
 
+        <section class="panel panel-default">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Services</strong></div>
+            <div class="panel-body">
+                <div ng-repeat="service in showMe">
+                    <a ng-href="#/services/{{service.serviceURL}}">
+                        <h3>{{service.title}}</h3>
+                        <code ng-repeat="feature in service.features">{{feature.text}}</code>
+                        <p ng-bind-html="service.description"></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Services</strong></div>
         <div class="panel-body">
