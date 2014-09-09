@@ -118,14 +118,14 @@
     }
 }
 .ainmate-scale-up.ng-enter {
-    @include animation(0.35s slideOutUp ease-in-out);
+    @include animation(0.45s slideOutUp ease-in-out);
 }
 
 // 
 @include keyframes(slideInRight) {
     0% {
         opacity: 0;
-        @include transform( translateX(25px) );
+        @include transform( translateX(200px) );
     }
     
     100% {

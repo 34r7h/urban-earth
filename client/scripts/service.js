@@ -10,7 +10,13 @@ angular.module('app.services', ['firebase'])
 				api.sync.media = $firebase(api.media);
 				console.log(id + title);
 				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.media.$update(id, {mediaTitle:title, mediaLink:link})
+				api.sync.media.$update(id, {mediaTitle:title, mediaLink:link}).then(function(media){
+					api.newID = media.name();
+					api.media = new Firebase("https://metal.firebaseio.com/index/media");
+					api.sync.index = $firebase(api.media);
+					api.sync.index.$set(link, api.newID);
+
+				})
 			};
 
 			api.saveClient = function(title, features, description){

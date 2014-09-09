@@ -3,13 +3,12 @@
   angular.module('app.controllers', []).controller('AppCtrl', [
     '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', function($scope, $rootScope, $firebase, api, $http, AWSControl) {
 	  $scope.msg = '';
-      $rootScope.mediaTitle = $scope.mediaTitle;
+
 	  console.log(AWSControl);
 	  $scope.fromservice = AWSControl.yeah; //no use
 	  $scope.myfile = {};
 	  $rootScope.$on('AWSUploadSuccess', function(){
 		  $scope.msg = 'Upload successful';
-		  $rootScope.mediaTitle = $scope.mediaTitle;
 	  });
 	  $rootScope.$on('AWSUploadError', function(){
 		  $scope.msg = 'Upload failed. Please retry';
@@ -43,7 +42,7 @@
         menu: 'vertical',
         fixedHeader: true,
         fixedSidebar: true,
-        pageTransition: $scope.pageTransitionOpts[0]
+        pageTransition: $scope.pageTransitionOpts[2]
       };
       $scope.$watch('admin', function(newVal, oldVal) {
         if (newVal.menu === 'horizontal' && oldVal.menu === 'vertical') {
