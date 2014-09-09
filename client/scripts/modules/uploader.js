@@ -151,7 +151,7 @@ uploader.directive('uploader', function(AWSControl){
     replace: true,
     scope : {},
     require: 'ngModel',
-    template: '<form novalidate><input type="file" /><button class="btn btn-behance" id="upIt" data-ng-click="upload()">Upload</button></form>',
+    template: '<form novalidate><input class="well" type="file" /><button class="btn btn-behance" id="upIt" data-ng-click="upload()">Upload</button></form>',
     restrict: 'E',
     link: function(scope, elem, attrs, ngModel){
        
