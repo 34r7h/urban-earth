@@ -215,7 +215,7 @@ module.exports = (grunt) ->
                     dest: "<%= yeoman.dist %>"
                 ]
 
-        
+
         # Put files not handled in other tasks here
         copy:
             dist:

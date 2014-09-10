@@ -54,15 +54,22 @@
           templateUrl: 'views/' + route + '.html',
 	        controller: function($scope, $state, api, $firebase){
 		        var itemList = new Firebase("https://metal.firebaseio.com/"+route);
-		        console.log('itemList = '+ itemList);
+		        //console.log('itemList = '+ itemList);
 		        var sync = $firebase(itemList);
 		        $scope.showMe = sync.$asArray();
+		        var aboutText = new Firebase("https://metal.firebaseio.com/about");
+		        var syncAbout = $firebase(aboutText);
+		        $scope.aboutHTML = syncAbout.$asArray();
+		        console.log($scope.aboutHTML);
+
 		        $scope.api = api;
+		        $scope.saveAbout = api.saveAbout;
+		        $scope.saved = api.aboutSaved;
 		        $scope.saveArticle = api.saveArticle;
 		        $scope.saveService = api.saveService;
 		        $scope.saveClient = api.saveClient;
 		        $scope.saveMedia = api.saveMedia;
-		        $scope.tags = ['foo', 'bar'];
+		        $scope.tags = ['Iron', 'Welding'];
 		        $scope.urlFilter = function(url) {
 			        return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		        };

@@ -18,7 +18,6 @@ angular.module('app.services', ['firebase'])
 
 				})
 			};
-
 			api.saveClient = function(title, features, description){
 				var clientURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				console.log(clientURL);
@@ -35,7 +34,6 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.$set(clientURL, api.newID);
 				});
 			};
-
 			api.saveService = function(title, features, description){
 				var serviceURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				console.log(serviceURL);
@@ -51,6 +49,14 @@ angular.module('app.services', ['firebase'])
 					// title = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 					api.sync.index.$set(serviceURL, api.newID);
 				});
+			};
+
+			api.saveAbout = function(id, text){
+				api.about = new Firebase("https://metal.firebaseio.com/about");
+				api.sync.about = $firebase(api.about);
+				console.log(id + ", "+ text);
+				api.sync.about.$update(id, {description:text});
+				api.aboutSaved = 'About Saved!'
 			};
 			api.saveArticle = function(title, tags, body){
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');

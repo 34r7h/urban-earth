@@ -7,7 +7,20 @@
                     <div class="panel">Home</div>
                 </tab>
                 <tab heading="About">
-                    <div class="panel">About</div>
+                    <div class="panel">
+                        <h2>About</h2>
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> About</strong></div>
+                            <div class="panel-body">
+                                <div text-angular="" ng-model="aboutText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="aboutText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                </textarea>
+                            </div>
+                        </section>
+                        <section>
+                            <button ng-click="saveAbout(aboutText)">Save</button>
+                        </section>
+                    </div>
                 </tab>
                 <tab heading="Services">
                     <div class="panel">
