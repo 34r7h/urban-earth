@@ -33,6 +33,14 @@
                     </ul>
                 </div>
             </section>
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> About</strong></div>
+                <div class="panel-body">
+                    <div ng-repeat="about in showMe">
+                            <p ng-bind-html="about.description"></p>
+                    </div>
+                </div>
+            </section>
 
         </div>
     </section>
