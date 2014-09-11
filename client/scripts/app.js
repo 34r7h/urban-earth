@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', [
+  var app = angular.module('app', [
 	  'ngSanitize',
 	  'ngRoute',
 	  'ngAnimate',
@@ -29,9 +29,9 @@
 	  'app.chart.directives',
 	  'app.page.ctrls',
 	  'akoenig.deckgrid',
-      'uploader']).config([
-    '$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($stateProvider, $urlRouterProvider, AWSControlProvider) {
-
+      'uploader']);
+	app.config([
+    '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider) {
 		  var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
@@ -41,43 +41,62 @@
 			  region         : 'us-west-2'
 
 		  };
-
 		  AWSControlProvider.supportType(imageSupportParams);
-      var routes, setRoutes, routesSingles, setSingleRoutes;
+
+      var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
       routes = ['home','about','services','clients','articles','media','admin', '404'];
       routesSingles = ['services','clients','articles','media'];
+		app.controller = function(name, constructor){
+			$controllerProvider.register(name, constructor);
+			return(this);
+		};
+      setControllers = function(route){
+	      var name, fun;
+	      name = route+'Ctrl';
+	      fun = function($scope, $state, api, $firebase) {
+		      $scope.greeting = 'Hola! '+ route;
+		      console.log(route + ' Ctrl Available' );
+		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
+		      //console.log('itemList = '+ itemList);
+		      var sync = $firebase(itemList);
+		      $scope.showMe = sync.$asArray();
+		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
+		      var syncAbout = $firebase(aboutText);
+		      $scope.aboutHTML = syncAbout.$asArray();
+		      console.log($state);
+
+
+		      $scope.api = api;
+		      $scope.saveAbout = api.saveAbout;
+		      $scope.saved = api.aboutSaved;
+		      $scope.saveArticle = api.saveArticle;
+		      $scope.saveService = api.saveService;
+		      $scope.saveClient = api.saveClient;
+		      $scope.saveMedia = api.saveMedia;
+		      $scope.tags = ['Iron', 'Welding'];
+		      $scope.urlFilter = function(url) {
+			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+		      };
+
+	      };
+	      app.controller(name, fun);
+      };
+			routes.forEach(function(route) {
+				console.log(route+'Ctrl');
+				setControllers(route);
+			});
       setRoutes = function(route) {
         var state, config;
 	    state = route;
         config = {
           url: '/' + route,
           templateUrl: 'views/' + route + '.html',
-	        controller: function($scope, $state, api, $firebase){
-		        var itemList = new Firebase("https://metal.firebaseio.com/"+route);
-		        //console.log('itemList = '+ itemList);
-		        var sync = $firebase(itemList);
-		        $scope.showMe = sync.$asArray();
-		        var aboutText = new Firebase("https://metal.firebaseio.com/about");
-		        var syncAbout = $firebase(aboutText);
-		        $scope.aboutHTML = syncAbout.$asArray();
-		        console.log($scope.aboutHTML);
-
-		        $scope.api = api;
-		        $scope.saveAbout = api.saveAbout;
-		        $scope.saved = api.aboutSaved;
-		        $scope.saveArticle = api.saveArticle;
-		        $scope.saveService = api.saveService;
-		        $scope.saveClient = api.saveClient;
-		        $scope.saveMedia = api.saveMedia;
-		        $scope.tags = ['Iron', 'Welding'];
-		        $scope.urlFilter = function(url) {
-			        return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-		        };
-	        }
+	      controller: route+'Ctrl'
         };
         $stateProvider.state(state, config);
         return $stateProvider;
       };
+
 	  setSingleRoutes = function(singleRoute) {
 		  var state, config;
 		  state = 'single-'+singleRoute;
@@ -105,10 +124,12 @@
 		  $stateProvider.state(state, config);
 		  return $stateProvider;
 	  };
-      routes.forEach(function(route) {
+
+		  routes.forEach(function(route) {
 	      console.log(route);
 	      return setRoutes(route);
       });
+
 	  routesSingles.forEach(function(routesSingle) {
 		  console.log(routesSingle);
 		  return setSingleRoutes(routesSingle);
