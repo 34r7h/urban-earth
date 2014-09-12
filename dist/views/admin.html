@@ -18,7 +18,7 @@
                             </div>
                         </section>
                         <section>
-                            <button ng-click="saveAbout($parent.aboutHTML[0].$id, $parent.aboutHTML[0].description)">Save</button> {{saved}}
+                            <button ng-click="updateAbout($parent.aboutHTML[0].$id, $parent.aboutHTML[0].description)">Save</button> {{saved}}
                         </section>
                     </div>
                 </tab>
@@ -52,6 +52,22 @@
                         <section>
                             <button ng-click="saveService(serviceTitle, features, serviceText)">Save</button>
                         </section>
+                        <div class="panel-body" ng-controller="servicesCtrl">
+                            <div ng-repeat="service in showMe">
+                                <a ng-href="#/services/{{service.serviceURL}}">
+                                    <h3>{{service.title}}</h3>
+                                    <code ng-repeat="feature in service.features">{{feature.text}}</code>
+                                    <p ng-bind-html="service.description"></p>
+                                    <div class="panel-footer" ng-init="removeService = false;">
+                                        <a href ng-show="!removeService" ng-click="removeService = true">Remove Service</a>
+                                        <a href="javascript:;" ng-show="removeService" ng-click="api.removeService(service.serviceURL, service.$id)" class="btn btn-primary" role="button">Yes, remove this service.</a>
+                                        <a href="javascript:;" ng-show="removeService" ng-click="removeService = false"class="btn btn-default" role="button">Cancel</a>
+                                        <p><div>ID:</div><pre>{{service.$id}}</pre></p>
+                                        <div>URL:</div><pre><code>{{service.serviceURL}}</code></pre>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </tab>
 
@@ -85,6 +101,22 @@
                         <section>
                             <button ng-click="saveClient(clientTitle, features, clientText)">Save</button>
                         </section>
+                        <div class="panel-body" ng-controller="clientsCtrl">
+                            <div ng-repeat="client in showMe">
+                                <a ng-href="#/clients/{{client.clientURL}}">
+                                    <h3>{{client.title}}</h3>
+                                    <code ng-repeat="feature in client.features">{{feature.text}}</code>
+                                    <p ng-bind-html="client.description"></p>
+                                    <div class="panel-footer" ng-init="removeClient = false;">
+                                        <a href ng-show="!removeClient" ng-click="removeClient = true">Remove Client</a>
+                                        <a href="javascript:;" ng-show="removeClient" ng-click="api.removeClient(client.clientURL, client.$id)" class="btn btn-primary" role="button">Yes, remove this client.</a>
+                                        <a href="javascript:;" ng-show="removeClient" ng-click="removeClient = false"class="btn btn-default" role="button">Cancel</a>
+                                        <p><div>ID:</div><pre>{{client.$id}}</pre></p>
+                                        <div>URL:</div><pre><code>{{client.clientURL}}</code></pre>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </tab>
 
@@ -117,13 +149,74 @@
                             <button ng-click="saveArticle(articleTitle, tags, articleText)">Save</button>
                         </section>
                     </div>
+                    <section class="panel panel-default" ng-controller="articlesCtrl">
+                        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Articles</strong></div>
+                        <div class="panel-body">
+                            <div ng-repeat="article in showMe">
+                                <a ng-href="#/articles/{{article.articleURL}}">
+                                    <h3>{{article.title}}</h3>
+                                    <code ng-repeat="tag in article.tags">{{tag.text}}</code>
+                                    <p ng-bind-html="article.body"></p>
+                                </a>
+                                <div class="panel-footer" ng-init="removeArticle = false;">
+                                    <a href ng-show="!removeArticle" ng-click="removeArticle = true">Remove Article</a>
+                                    <a href="javascript:;" ng-show="removeArticle" ng-click="api.removeArticle(article.articleURL, article.$id)" class="btn btn-primary" role="button">Yes, remove this article.</a>
+                                    <a href="javascript:;" ng-show="removeArticle" ng-click="removeArticle = false"class="btn btn-default" role="button">Cancel</a>
+                                    <p><div>ID:</div><pre>{{article.$id}}</pre></p>
+                                    <div>URL:</div><pre><code>{{article.articleURL}}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </tab>
                 <tab heading="Media">
                     <div class="panel">Add Media</div>
-                    <code>
-                        {{ msg }}
-                    </code>
-                    <uploader data-ng-model="myfile"></uploader>
+                    <div class="panel">
+                        <uploader data-ng-model="myfile"></uploader>
+                    </div>
+                    <div data-ng-controller="mediaCtrl">
+                        <div ng-repeat="media in showMe">
+                            <div class="panel col-sm-3">
+                                <div class="panel-heading" ng-click="editTitle = true">
+                                    <div ng-hide="editTitle===true">{{media.mediaTitle}}</div>
+                                    <input ng-show="editTitle===true" ng-model="media.mediaTitle" ng-blur="saveMedia(media.$id,media.mediaTitle);editTitle=false;">
+                                </div>
+                                <a ng-href="#/media/{{media.mediaLink }}"><img class="" src="{{media.mediaURL}}" width="100%"></a>
+                                <div class="panel-footer" ng-init="removeMedia = false;">
+                                    <a href ng-show="!removeMedia" ng-click="removeMedia = true">Remove Media</a>
+                                    <a href="javascript:;" ng-show="removeMedia" ng-click="api.removeMedia(media.mediaLink, media.$id)" class="btn btn-primary" role="button">Yes, remove this media.</a>
+                                    <a href="javascript:;" ng-show="removeMedia" ng-click="removeMedia = false"class="btn btn-default" role="button">Cancel</a>
+                                    <p><div>ID:</div><pre>{{media.$id}}</pre></p>
+                                    <div>URL:</div><pre><code>{{media.mediaURL}}</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </tab>
+                </tabset>
+</div>
+                                <!--div ng-repeat="media in showMe">
+
+
+                                                <div class="col-sm-4">
+                                                    <div class="thumbnail">
+                                                        <img alt="" ng-src="{{media.mediaURL}}" height="100">
+                                                        <div class="caption">
+                                                            <h3>{{media.mediaTitle}}</h3>
+                                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                            <p><a href="javascript:;" class="btn btn-primary" role="button">Button</a> <a href="javascript:;" class="btn btn-default" role="button">Button</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                </div-->
+
+                        </section>
+
+                    </div>
                 </tab>
             </tabset>
         </div>
