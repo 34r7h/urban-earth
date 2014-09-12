@@ -8,26 +8,13 @@
 	  'ui.router',
 	  'easypiechart',
 	  'textAngular',
-	  'ui.tree',
-	  'ngMap',
 	  'ngTagsInput',
 	  'app.controllers',
 	  'app.services',
 	  'app.directives',
 	  'app.localization',
 	  'app.nav',
-	  'app.ui.ctrls',
-	  'app.ui.directives',
-	  'app.ui.services',
-	  'app.ui.map',
-	  'app.form.validation',
-	  'app.ui.form.ctrls',
-	  'app.ui.form.directives',
-	  'app.tables',
-	  'app.task',
-	  'app.chart.ctrls',
-	  'app.chart.directives',
-	  'app.page.ctrls',
+
 	  'akoenig.deckgrid',
       'uploader']);
 	app.config([
@@ -44,7 +31,7 @@
 		  AWSControlProvider.supportType(imageSupportParams);
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','media','admin', '404'];
+      routes = ['home','about','services','clients','articles','admin', '404', 'media'];
       routesSingles = ['services','clients','articles','media'];
 		app.controller = function(name, constructor){
 			$controllerProvider.register(name, constructor);
@@ -54,25 +41,25 @@
 	      var name, fun;
 	      name = route+'Ctrl';
 	      fun = function($scope, $state, api, $firebase) {
-		      $scope.greeting = 'Hola! '+ route;
-		      console.log(route + ' Ctrl Available' );
+		      $scope.state = $state;
+		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
-		      //console.log('itemList = '+ itemList);
 		      var sync = $firebase(itemList);
 		      $scope.showMe = sync.$asArray();
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-		      console.log($state);
 
-
-		      $scope.api = api;
-		      $scope.saveAbout = api.saveAbout;
+		      $scope.updateAbout = api.updateAbout;
 		      $scope.saved = api.aboutSaved;
+
 		      $scope.saveArticle = api.saveArticle;
 		      $scope.saveService = api.saveService;
 		      $scope.saveClient = api.saveClient;
+
 		      $scope.saveMedia = api.saveMedia;
+		      $scope.removeMedia = api.removeMedia;
+
 		      $scope.tags = ['Iron', 'Welding'];
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');

@@ -50,7 +50,7 @@ uploader.provider('AWSControl', function(){
 
   this.setYeah = function(yeah){ this.yeah = yeah; };
 
-  this.$get = function($q, $rootScope, $firebase){
+  this.$get = function($q, $rootScope, $firebase, api){
       return {
           yeah: this.yeah,
           mimes: mimes,
@@ -69,7 +69,6 @@ uploader.provider('AWSControl', function(){
 
           upload: function(file, key){
 	          var cDate = Date.now();
-	          console.log(cDate);
 	          key = key+'-'+ cDate;
 	            var handlerIndex = -1;
 	            angular.forEach(this.mimes, function(mime, index){
@@ -104,7 +103,24 @@ uploader.provider('AWSControl', function(){
 	                    $rootScope.$broadcast('AWSUploadSuccess');
 	                    console.log('https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key) );
 						$rootScope.newImage = 'https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key);
-	                    $rootScope.mediaTitle = prompt('Media Upload Successful! Let\'s name this...');
+	                    $rootScope.mediaTitle = prompt('Upload Successful! Please name your media.');
+		                $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+
+/* beginning of self-called check on path availablility
+						 var index = new Firebase("https://metal.firebaseio.com/index/media");
+						 var sync = $firebase(index);
+						 var mediaIndex = sync.$asObject();
+						 console.log(mediaIndex);
+		                (function(){
+			                console.log($rootScope.mediaTitle + ' function running: '+mediaIndex);
+			                while ($rootScope.mediaTitle){
+				                console.log('in loop..');
+				                $rootScope.mediaTitle = prompt('Try again, that\'s taken! Please name your media.');
+				                $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+			                }
+			                console.log('loop over.')
+		                })();
+*/
 	                    console.log($rootScope.newImage + ' ' + $rootScope.newImage);
 	                    var media = new Firebase("https://metal.firebaseio.com/media");
 	                    var sync = $firebase(media);
@@ -114,8 +130,7 @@ uploader.provider('AWSControl', function(){
 		                    console.log(newID);
 		                    var index = new Firebase("https://metal.firebaseio.com/index/media");
 		                    var sync = $firebase(index);
-		                    var title = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-		                    sync.$set(title,newID);
+		                    sync.$set($rootScope.mediaTitle,newID);
 	                    });
 	                    deferred.resolve(data);
 	                }

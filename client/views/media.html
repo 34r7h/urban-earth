@@ -6,9 +6,8 @@
             <div deckgrid class="deckgrid" source="showMe">
                 <div class="a-card">
                     <div class="panel panel-default">
-                        <div class="panel-heading" ng-click="editTitle = true">
-                            <div ng-hide="editTitle===true">{{card.mediaTitle}}</div>
-                            <input ng-show="editTitle===true" ng-model="card.mediaTitle" ng-blur="mother.saveMedia(card.$id,card.mediaTitle);editTitle=false;">
+                        <div class="panel-heading" >
+                            <div>{{card.mediaTitle}}</div>
                         </div>
                         <div class="panel-body">
                             <a ng-href="#/media/{{card.mediaLink }}">
@@ -16,9 +15,6 @@
                             </a>
                         </div>
                         <div class="panel-footer">
-                            <a href="javascript:;" class="btn btn-primary" role="button">Button</a>
-                            <a href="javascript:;" class="btn btn-default" role="button">Button</a>
-                            <p><div>ID:</div><pre>{{card.$id}}</pre></p>
                             <div>URL:</div><pre><code>{{card.mediaURL}}</code></pre>
                         </div>
                     </div>
