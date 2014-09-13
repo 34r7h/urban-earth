@@ -32,15 +32,6 @@
                             <input type="text" ng-model="serviceTitle" placeholder="Service Title"/>
                         </div>
 
-
-                        <section class="panel panel-default">
-                            <div class="panel-heading">
-                                <strong><span class="glyphicon glyphicon-th"></span> Service Features</strong>
-                            </div>
-                            <div class="panel-body ng-scope">
-                                <tags-input ng-model="features" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
-                            </div>
-                        </section>
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Service Description</strong></div>
                             <div class="panel-body">
@@ -50,14 +41,22 @@
                             </div>
                         </section>
                         <section>
-                            <button ng-click="saveService(serviceTitle, features, serviceText)">Save</button>
+                            <button ng-click="saveService(serviceTitle, serviceText)">Save</button>
                         </section>
                         <div class="panel-body" ng-controller="servicesCtrl">
                             <div ng-repeat="service in showMe">
-                                <a ng-href="#/services/{{service.serviceURL}}">
-                                    <h3>{{service.title}}</h3>
-                                    <code ng-repeat="feature in service.features">{{feature.text}}</code>
-                                    <p ng-bind-html="service.description"></p>
+                                <div class="panel-heading" ng-click="editTitle = true">
+                                    <div ng-hide="editTitle===true">{{service.title}}</div>
+                                    <input ng-show="editTitle===true" ng-model="service.title" ng-blur="updateServiceTitle(service.$id,service.title);editTitle=false;">
+                                </div>
+                                <div class="panel-body">
+                                    <div text-angular="" ng-init="html = service.description;" ng-model="service.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                    <textarea ng-init="html = service.description" ng-show="showHtml" ta-bind="ta-bind" ng-model="service.description" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                    </textarea>
+                                </div>
+                                <section>
+                                    <button ng-click="updateService(service.$id, service.description)">Save</button>
+                                </section>
                                     <div class="panel-footer" ng-init="removeService = false;">
                                         <a href ng-show="!removeService" ng-click="removeService = true">Remove Service</a>
                                         <a href="javascript:;" ng-show="removeService" ng-click="api.removeService(service.serviceURL, service.$id)" class="btn btn-primary" role="button">Yes, remove this service.</a>
@@ -65,12 +64,10 @@
                                         <p><div>ID:</div><pre>{{service.$id}}</pre></p>
                                         <div>URL:</div><pre><code>{{service.serviceURL}}</code></pre>
                                     </div>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </tab>
-
                 <tab heading="Clients">
                     <div class="panel">
                         <h2>New Client</h2>
@@ -81,15 +78,6 @@
                             <input type="text" ng-model="clientTitle" placeholder="Client Title"/>
                         </div>
 
-
-                        <section class="panel panel-default">
-                            <div class="panel-heading">
-                                <strong><span class="glyphicon glyphicon-th"></span> Client Features</strong>
-                            </div>
-                            <div class="panel-body ng-scope">
-                                <tags-input ng-model="features" class="ui-tags-input ng-isolate-scope ng-valid ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text ng-dirty"></tags-input>
-                            </div>
-                        </section>
                         <section class="panel panel-default">
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Client Description</strong></div>
                             <div class="panel-body">
@@ -103,23 +91,30 @@
                         </section>
                         <div class="panel-body" ng-controller="clientsCtrl">
                             <div ng-repeat="client in showMe">
-                                <a ng-href="#/clients/{{client.clientURL}}">
-                                    <h3>{{client.title}}</h3>
-                                    <code ng-repeat="feature in client.features">{{feature.text}}</code>
+                                <div class="panel-heading" ng-click="editTitle = true">
+                                    <div ng-hide="editTitle===true">{{client.title}}</div>
+                                    <input ng-show="editTitle===true" ng-model="client.title" ng-blur="updateClientTitle(client.$id,client.title);editTitle=false;">
+                                </div>
                                     <p ng-bind-html="client.description"></p>
+                                    <div class="panel-body">
+                                        <div text-angular="" ng-init="html = client.description;" ng-model="client.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                        <textarea ng-init="html = client.description" ng-show="showHtml" ta-bind="ta-bind" ng-model="client.description" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                        </textarea>
+                                    </div>
                                     <div class="panel-footer" ng-init="removeClient = false;">
                                         <a href ng-show="!removeClient" ng-click="removeClient = true">Remove Client</a>
                                         <a href="javascript:;" ng-show="removeClient" ng-click="api.removeClient(client.clientURL, client.$id)" class="btn btn-primary" role="button">Yes, remove this client.</a>
                                         <a href="javascript:;" ng-show="removeClient" ng-click="removeClient = false"class="btn btn-default" role="button">Cancel</a>
+                                        <section>
+                                            <button ng-click="updateClient(client.$id, client.description)">Save</button>
+                                        </section>
                                         <p><div>ID:</div><pre>{{client.$id}}</pre></p>
                                         <div>URL:</div><pre><code>{{client.clientURL}}</code></pre>
                                     </div>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </tab>
-
                 <tab heading="Articles">
                     <div class="panel">
                         <h2>New Article</h2>
@@ -153,11 +148,19 @@
                         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Articles</strong></div>
                         <div class="panel-body">
                             <div ng-repeat="article in showMe">
-                                <a ng-href="#/articles/{{article.articleURL}}">
-                                    <h3>{{article.title}}</h3>
+                                <div class="panel-heading" ng-click="editTitle = true">
+                                    <div ng-hide="editTitle===true">{{article.title}}</div>
+                                    <input ng-show="editTitle===true" ng-model="article.title" ng-blur="updateArticleTitle(article.$id,article.title);editTitle=false;">
+                                </div>
                                     <code ng-repeat="tag in article.tags">{{tag.text}}</code>
-                                    <p ng-bind-html="article.body"></p>
-                                </a>
+                                <div class="panel-body">
+                                    <div text-angular="" ng-init="html = article.body;" ng-model="client.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                    <textarea ng-init="html = article.body" ng-show="showHtml" ta-bind="ta-bind" ng-model="article.body" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                                    </textarea>
+                                </div>
+                                <section>
+                                    <button ng-click="updateArticle(article.$id, article.body)">Save</button>
+                                </section>
                                 <div class="panel-footer" ng-init="removeArticle = false;">
                                     <a href ng-show="!removeArticle" ng-click="removeArticle = true">Remove Article</a>
                                     <a href="javascript:;" ng-show="removeArticle" ng-click="api.removeArticle(article.articleURL, article.$id)" class="btn btn-primary" role="button">Yes, remove this article.</a>
@@ -195,30 +198,6 @@
                         </div>
                     </tab>
                 </tabset>
-</div>
-                                <!--div ng-repeat="media in showMe">
-
-
-                                                <div class="col-sm-4">
-                                                    <div class="thumbnail">
-                                                        <img alt="" ng-src="{{media.mediaURL}}" height="100">
-                                                        <div class="caption">
-                                                            <h3>{{media.mediaTitle}}</h3>
-                                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                            <p><a href="javascript:;" class="btn btn-primary" role="button">Button</a> <a href="javascript:;" class="btn btn-default" role="button">Button</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                </div-->
-
-                        </section>
-
-                    </div>
-                </tab>
-            </tabset>
         </div>
     </div>
 </div>

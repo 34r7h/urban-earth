@@ -6,7 +6,6 @@
                 <div ng-repeat="service in showMe">
                     <a ng-href="#/services/{{service.serviceURL}}">
                         <h3>{{service.title}}</h3>
-                        <code ng-repeat="feature in service.features">{{feature.text}}</code>
                         <p ng-bind-html="service.description"></p>
                     </a>
                 </div>

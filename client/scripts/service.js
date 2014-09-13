@@ -52,10 +52,21 @@ angular.module('app.services', ['firebase'])
 				});
 
 			};
+			api.updateClientTitle = function(id, title){
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				api.sync.clients.$update(id, {title:title, clientURL:link}).then(function(client){
+					api.newID = client.name();
+					api.sync.index.clients.$set(link, api.newID);
+				})
+			};
+			api.updateClient = function(id, description){
+				console.log(id +' '+ description);
+				api.sync.clients.$update(id, {description:description});
+			};
 // Services
-			api.saveService = function(title, features, description){
+			api.saveService = function(title, description){
 				var serviceURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.services.$push({title:title,features:features,description:description,serviceURL:serviceURL}).then(function (service){
+				api.sync.services.$push({title:title,description:description,serviceURL:serviceURL}).then(function (service){
 					api.newID = service.name();
 					api.sync.index.services.$set(serviceURL, api.newID);
 				});
@@ -67,6 +78,16 @@ angular.module('app.services', ['firebase'])
 				});
 
 			};
+			api.updateServiceTitle = function(id, title){
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				api.sync.services.$update(id, {title:title, serviceURL:link}).then(function(service){
+					api.newID = service.name();
+					api.sync.index.services.$set(link, api.newID);
+				})
+			};
+			api.updateService = function(id, description){
+				api.sync.services.$update(id, {description:description});
+			};
 // About
 			api.updateAbout = function(id, text){
 				api.sync.about.$update(id, {description:text});
@@ -75,24 +96,28 @@ angular.module('app.services', ['firebase'])
 // Articles
 			api.saveArticle = function(title, tags, body){
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				console.log(articleURL);
 				api.sync.articles.$push({title:title,tags:tags,body:body,articleURL:articleURL}).then(function (article){
 					api.newID = article.name();
 					api.sync.index.articles.$set(articleURL, api.newID);
 				});
 			};
 			api.removeArticle = function(name,id){
-				console.log(name + id);
 				api.sync.articles.$remove(id).then(function(){
 					api.sync.index.articles.$remove(name);
 				});
 
 			};
-
-
-
-		console.log(api.sync);
-
+			api.updateArticleTitle = function(id, title){
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				api.sync.article.$update(id, {title:title, articleURL:link}).then(function(article){
+					api.newID = article.name();
+					api.sync.index.articles.$set(link, api.newID);
+				})
+			};
+			api.updateArticle = function(id, body){
+				console.log(id +' '+ body);
+				api.sync.clients.$update(id, {body:body});
+			};
 			return api;
 
 	}]);

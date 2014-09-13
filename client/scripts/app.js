@@ -54,8 +54,14 @@
 		      $scope.saved = api.aboutSaved;
 
 		      $scope.saveArticle = api.saveArticle;
+
 		      $scope.saveService = api.saveService;
+		      $scope.updateServiceTitle = api.updateServiceTitle;
+		      $scope.updateService = api.updateService;
+
 		      $scope.saveClient = api.saveClient;
+		      $scope.updateClientTitle = api.updateClientTitle;
+		      $scope.updateClient = api.updateClient;
 
 		      $scope.saveMedia = api.saveMedia;
 		      $scope.removeMedia = api.removeMedia;
