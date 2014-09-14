@@ -2,74 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Chart/ChartCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Chart/ChartCtrl.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Chart/ChartDirective.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Chart/ChartDirective.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormCtrl.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormDirective.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormDirective.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormValidation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Form/FormValidation.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Page/PageCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Page/PageCtrl.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Table/TableCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Table/TableCtrl.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Task/Task.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/Task/Task.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/Map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/Map.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UICtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UICtrl.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UIDirective.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UIDirective.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UIService.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/scripts/UI/UIService.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/charts/charts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/charts/flot.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/charts/morris.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/forms/elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/forms/layouts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/forms/validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/forms/wizard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/mail/compose.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/mail/inbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/mail/single.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/blank.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/features.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/forgot-password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/lock-screen.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/signin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/tables/dynamic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/tables/responsive.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/tables/static.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/tasks/tasks.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/components.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/grids.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/icons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/maps.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/nested-lists.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/pricing-tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/typography.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/ui/widgets.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/scripts/service.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin.html" afterPath="$PROJECT_DIR$/client/views/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/admin.html" afterPath="$PROJECT_DIR$/dist/views/admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/app.js" afterPath="$PROJECT_DIR$/client/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="$PROJECT_DIR$/dist/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/articles.html" afterPath="$PROJECT_DIR$/client/views/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home.html" afterPath="$PROJECT_DIR$/client/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/articles.html" afterPath="$PROJECT_DIR$/dist/views/articles.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/shared/main.js" afterPath="$PROJECT_DIR$/client/scripts/shared/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/styles/main.scss" afterPath="$PROJECT_DIR$/client/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/media.html" afterPath="$PROJECT_DIR$/client/views/media.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/service.js" afterPath="$PROJECT_DIR$/client/scripts/service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/modules/uploader.js" afterPath="$PROJECT_DIR$/client/scripts/modules/uploader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -97,24 +37,9 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.4814816" vertical-offset="1098" max-vertical-offset="2975">
-              <caret line="52" column="76" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="76" />
+            <state vertical-scroll-proportion="-2.4814816" vertical-offset="2533" max-vertical-offset="2975">
+              <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.8965516" vertical-offset="821" max-vertical-offset="2100">
-              <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-              <folding>
-                <element signature="e#64#343#0" expanded="false" />
-                <element signature="e#565#811#0" expanded="false" />
-                <element signature="e#2803#3759#0" expanded="false" />
-                <element signature="e#3917#3996#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -122,8 +47,8 @@
       <file leaf-file-name="clients.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/clients.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7037036" vertical-offset="225" max-vertical-offset="1250">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state vertical-scroll-proportion="-4.851852" vertical-offset="69" max-vertical-offset="1225">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -132,8 +57,8 @@
       <file leaf-file-name="services.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7037036" vertical-offset="0" max-vertical-offset="1700">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
+            <state vertical-scroll-proportion="-7.4074073" vertical-offset="0" max-vertical-offset="1675">
+              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -168,47 +93,49 @@
       <file leaf-file-name="articles.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="700">
-              <caret line="20" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="20" selection-end-column="14" />
+            <state vertical-scroll-proportion="-2.357143" vertical-offset="168" max-vertical-offset="650">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/scripts/service.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49025488" vertical-offset="298" max-vertical-offset="1275">
-              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2375">
+              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
               <folding>
-                <element signature="e#606#1099#0" expanded="false" />
-                <element signature="e#1139#1271#0" expanded="false" />
-                <element signature="e#1342#1709#0" expanded="false" />
-                <element signature="e#1750#1886#0" expanded="false" />
-                <element signature="e#1959#2334#0" expanded="false" />
-                <element signature="e#2720#3102#0" expanded="false" />
-                <element signature="e#3144#3282#0" expanded="false" />
+                <element signature="e#64#343#0" expanded="false" />
+                <element signature="e#565#811#0" expanded="false" />
+                <element signature="e#3077#4033#0" expanded="false" />
+                <element signature="e#4191#4270#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="media.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/media.html">
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4814816" vertical-offset="50" max-vertical-offset="1250">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uploader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/scripts/modules/uploader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="4950">
-              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.6723716" vertical-offset="550" max-vertical-offset="1550">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+              <folding>
+                <element signature="e#668#1189#0" expanded="false" />
+                <element signature="e#1229#1361#0" expanded="false" />
+                <element signature="e#1908#2275#0" expanded="false" />
+                <element signature="e#2316#2452#0" expanded="false" />
+                <element signature="e#2500#2815#0" expanded="false" />
+                <element signature="e#2864#2970#0" expanded="false" />
+                <element signature="e#3033#3390#0" expanded="false" />
+                <element signature="e#3432#3570#0" expanded="false" />
+                <element signature="e#3619#3939#0" expanded="false" />
+                <element signature="e#3989#4057#0" expanded="false" />
+                <element signature="e#4107#4201#0" expanded="false" />
+                <element signature="e#4270#4658#0" expanded="false" />
+                <element signature="e#4700#4810#0" expanded="false" />
+                <element signature="e#4859#5178#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -216,29 +143,13 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0941176" vertical-offset="1002" max-vertical-offset="5750">
-              <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/styles/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.326923" vertical-offset="998" max-vertical-offset="2050">
-              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/nav.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111" vertical-offset="175" max-vertical-offset="800">
-              <caret line="19" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="12" />
-              <folding />
+            <state vertical-scroll-proportion="-5.767857" vertical-offset="3402" max-vertical-offset="4425">
+              <caret line="164" column="106" selection-start-line="164" selection-start-column="106" selection-end-line="164" selection-end-column="106" />
+              <folding>
+                <element signature="tag#tab#1;tag#tabset#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#section#0;n#tab#4;n#tabset#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="tag#tab#5;tag#tabset#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,20 +187,21 @@
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/dist/views/admin.html" />
         <option value="$PROJECT_DIR$/dist/views/home.html" />
-        <option value="$PROJECT_DIR$/client/views/services.html" />
         <option value="$PROJECT_DIR$/client/views/about.html" />
-        <option value="$PROJECT_DIR$/client/views/clients.html" />
         <option value="$PROJECT_DIR$/client/scripts/shared/main.js" />
         <option value="$PROJECT_DIR$/client/views/nav.html" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/styles/main.scss" />
         <option value="$PROJECT_DIR$/client/views/home.html" />
         <option value="$PROJECT_DIR$/client/views/media.html" />
+        <option value="$PROJECT_DIR$/client/views/clients.html" />
+        <option value="$PROJECT_DIR$/client/views/services.html" />
+        <option value="$PROJECT_DIR$/client/scripts/service.js" />
+        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/scripts/modules/uploader.js" />
         <option value="$PROJECT_DIR$/client/views/articles.html" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
-        <option value="$PROJECT_DIR$/client/scripts/service.js" />
+        <option value="$PROJECT_DIR$/client/scripts/api.js" />
       </list>
     </option>
   </component>
@@ -701,13 +613,21 @@
       <created>1410405272038</created>
       <updated>1410405272038</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="crud operations nearly complete">
+      <created>1410501063481</created>
+      <updated>1410501063481</updated>
+    </task>
+    <task id="LOCAL-00012" summary="complete crud on everything but image attachments">
+      <created>1410577732277</created>
+      <updated>1410577732278</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30703014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -715,12 +635,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15871833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15871833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -751,7 +671,9 @@
     <MESSAGE value="image upload and media gallery" />
     <MESSAGE value="about updatable" />
     <MESSAGE value="dynamic controller creation in config for homepage $scopes" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic controller creation in config for homepage $scopes" />
+    <MESSAGE value="crud operations nearly complete" />
+    <MESSAGE value="complete crud on everything but image attachments" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete crud on everything but image attachments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -770,13 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/views/pages/blank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -805,13 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="375">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/views/ui/buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12050">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -997,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4814816" vertical-offset="1098" max-vertical-offset="2975">
-          <caret line="52" column="76" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/shared/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="2375">
@@ -1027,10 +927,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/modules/uploader.js">
+    <entry file="file://$PROJECT_DIR$/client/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="4950">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+        <state vertical-scroll-proportion="-5.326923" vertical-offset="998" max-vertical-offset="2050">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1043,71 +943,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="700">
-          <caret line="20" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.326923" vertical-offset="998" max-vertical-offset="2050">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.8965516" vertical-offset="821" max-vertical-offset="2100">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-          <folding>
-            <element signature="e#64#343#0" expanded="false" />
-            <element signature="e#565#811#0" expanded="false" />
-            <element signature="e#2803#3759#0" expanded="false" />
-            <element signature="e#3917#3996#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/clients.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7037036" vertical-offset="225" max-vertical-offset="1250">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state vertical-scroll-proportion="-4.851852" vertical-offset="69" max-vertical-offset="1225">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7037036" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
+        <state vertical-scroll-proportion="-7.4074073" vertical-offset="0" max-vertical-offset="1675">
+          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4814816" vertical-offset="2533" max-vertical-offset="2975">
+          <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/modules/uploader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6079295" vertical-offset="2149" max-vertical-offset="4900">
+          <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.357143" vertical-offset="168" max-vertical-offset="650">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2375">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+          <folding>
+            <element signature="e#64#343#0" expanded="false" />
+            <element signature="e#565#811#0" expanded="false" />
+            <element signature="e#3077#4033#0" expanded="false" />
+            <element signature="e#4191#4270#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0941176" vertical-offset="1002" max-vertical-offset="5750">
-          <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
-          <folding />
+        <state vertical-scroll-proportion="-5.767857" vertical-offset="3402" max-vertical-offset="4425">
+          <caret line="164" column="106" selection-start-line="164" selection-start-column="106" selection-end-line="164" selection-end-column="106" />
+          <folding>
+            <element signature="tag#tab#1;tag#tabset#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#section#0;n#tab#4;n#tabset#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="tag#tab#5;tag#tabset#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/service.js">
+    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49025488" vertical-offset="298" max-vertical-offset="1275">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6723716" vertical-offset="550" max-vertical-offset="1550">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
-            <element signature="e#606#1099#0" expanded="false" />
-            <element signature="e#1139#1271#0" expanded="false" />
-            <element signature="e#1342#1709#0" expanded="false" />
-            <element signature="e#1750#1886#0" expanded="false" />
-            <element signature="e#1959#2334#0" expanded="false" />
-            <element signature="e#2720#3102#0" expanded="false" />
-            <element signature="e#3144#3282#0" expanded="false" />
+            <element signature="e#668#1189#0" expanded="false" />
+            <element signature="e#1229#1361#0" expanded="false" />
+            <element signature="e#1908#2275#0" expanded="false" />
+            <element signature="e#2316#2452#0" expanded="false" />
+            <element signature="e#2500#2815#0" expanded="false" />
+            <element signature="e#2864#2970#0" expanded="false" />
+            <element signature="e#3033#3390#0" expanded="false" />
+            <element signature="e#3432#3570#0" expanded="false" />
+            <element signature="e#3619#3939#0" expanded="false" />
+            <element signature="e#3989#4057#0" expanded="false" />
+            <element signature="e#4107#4201#0" expanded="false" />
+            <element signature="e#4270#4658#0" expanded="false" />
+            <element signature="e#4700#4810#0" expanded="false" />
+            <element signature="e#4859#5178#0" expanded="false" />
           </folding>
         </state>
       </provider>

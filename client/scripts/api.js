@@ -2,7 +2,7 @@ angular.module('app.services', ['firebase'])
 	.factory('api', ['$firebase',
 		function($firebase) {
 
-			var api = {sync:{index:{}},index:{}};
+			var api = {show:{},sync:{index:{}},index:{}};
 
 			var types = ['media','clients','services','articles', 'about'];
 			var baseURL = 'https://metal.firebaseio.com/';
@@ -12,22 +12,21 @@ angular.module('app.services', ['firebase'])
 				api.sync[type] = $firebase(api[type]);
 				api.index[type] = new Firebase(indexURL+type);
 				api.sync.index[type] = $firebase(api.index[type]);
+				api.show[type] = api.sync.index[type].$asArray();
 			});
 // Media
 			api.saveMedia = function(id, title){
 				console.log(id + title);
 				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				api.sync.media.$update(id, {mediaTitle:title, mediaLink:link}).then(function(media){
-					console.log(api.sync.index.media[link]);
 					api.newID = media.name();
 					if(api.sync.index.media[link] === false){
 						api.sync.index.media.$set(link, api.newID);
 					} else {
 						console.log('Try again');
-
+						// prompt('Give this a title that\'s not taken yet');
+						// this();
 					}
-
-
 				})
 			};
 			api.removeMedia = function(name,id){
@@ -36,6 +35,21 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.media.$remove(name);
 				});
 
+			};
+			api.addContentMedia = function(content, id, media){
+				console.log(content +' '+id+' '+media);
+				media.push(id);
+			};
+			api.removeContentMedia = function(media, id){
+				console.log('so called media...'+media +' supposed id:'+ id);
+				for(var i=0; i< media.length; i++){
+					console.log(media[i]);
+					if(media[i] === id){
+						media.splice(i, 1);  //removes 1 element at position i
+						break;
+					}
+				}
+				console.log('so called new media: '+ media);
 			};
 // Clients
 			api.saveClient = function(title, features, description){
@@ -94,9 +108,10 @@ angular.module('app.services', ['firebase'])
 				api.aboutSaved = 'About Saved!'
 			};
 // Articles
-			api.saveArticle = function(title, tags, body){
+			api.saveArticle = function(title, tags, body, media){
+				var media = media;
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.articles.$push({title:title,tags:tags,body:body,articleURL:articleURL}).then(function (article){
+				api.sync.articles.$push({title:title,tags:tags,body:body,media:media,articleURL:articleURL}).then(function (article){
 					api.newID = article.name();
 					api.sync.index.articles.$set(articleURL, api.newID);
 				});
@@ -114,9 +129,9 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.articles.$set(link, api.newID);
 				})
 			};
-			api.updateArticle = function(id, body){
+			api.updateArticle = function(id, body, media){
 				console.log(id +' '+ body);
-				api.sync.clients.$update(id, {body:body});
+				api.sync.articles.$update(id, {body:body, media:media});
 			};
 			return api;
 

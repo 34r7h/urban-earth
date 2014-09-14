@@ -7,12 +7,10 @@
                 <a ng-href="#/articles/{{article.articleURL}}">
                     <h3>{{article.title}}</h3>
                     <code ng-repeat="tag in article.tags">{{tag.text}}</code>
+                    <div ng-repeat="image in article.media"><img ng-controller="mediaCtrl" ng-src="{{showMe.$getRecord($parent.image).mediaURL}}" width="100%">{{image}}</div>
                     <p ng-bind-html="article.body"></p>
                 </a>
-                <div class="panel-footer" ng-init="removeArticle = false;">
-                    <a href ng-show="!removeArticle" ng-click="removeArticle = true">Remove Article</a>
-                    <a href="javascript:;" ng-show="removeArticle" ng-click="api.removeArticle(article.articleURL, article.$id)" class="btn btn-primary" role="button">Yes, remove this article.</a>
-                    <a href="javascript:;" ng-show="removeArticle" ng-click="removeArticle = false"class="btn btn-default" role="button">Cancel</a>
+                <div class="panel-footer">
                     <p><div>ID:</div><pre>{{article.$id}}</pre></p>
                     <div>URL:</div><pre><code>{{article.articleURL}}</code></pre>
                 </div>

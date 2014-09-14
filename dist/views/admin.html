@@ -140,8 +140,11 @@
                                 </textarea>
                             </div>
                         </section>
+                        <div ng-controller="mediaCtrl">
+                            <div ng-repeat="image in showMe">{{image.$id}} <img ng-click="$parent.addContentMedia($parent.showMe.media, image.$id, $parent.$parent.media)" ng-src="{{image.mediaURL}}" width="25%"> </div>
+                        </div>
                         <section>
-                            <button ng-click="saveArticle(articleTitle, tags, articleText)">Save</button>
+                            <button ng-click="saveArticle(articleTitle, tags, articleText, media)">Save</button>
                         </section>
                     </div>
                     <section class="panel panel-default" ng-controller="articlesCtrl">
@@ -154,12 +157,12 @@
                                 </div>
                                     <code ng-repeat="tag in article.tags">{{tag.text}}</code>
                                 <div class="panel-body">
-                                    <div text-angular="" ng-init="html = article.body;" ng-model="client.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                                    <div text-angular="" ng-init="html = article.body;" ng-model="article.body" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
                                     <textarea ng-init="html = article.body" ng-show="showHtml" ta-bind="ta-bind" ng-model="article.body" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
                                     </textarea>
                                 </div>
                                 <section>
-                                    <button ng-click="updateArticle(article.$id, article.body)">Save</button>
+                                    <button ng-click="api.updateArticle(article.$id, article.body, $parent.media)">Save</button>
                                 </section>
                                 <div class="panel-footer" ng-init="removeArticle = false;">
                                     <a href ng-show="!removeArticle" ng-click="removeArticle = true">Remove Article</a>
@@ -167,6 +170,11 @@
                                     <a href="javascript:;" ng-show="removeArticle" ng-click="removeArticle = false"class="btn btn-default" role="button">Cancel</a>
                                     <p><div>ID:</div><pre>{{article.$id}}</pre></p>
                                     <div>URL:</div><pre><code>{{article.articleURL}}</code></pre>
+                                    <div ng-repeat="media in article.media" ng-click="showOptions = true"><div ng-show="showOptions" ng-click="$parent.$parent.removeContentMedia($parent.article.media, media);">Remove Image</div><img ng-controller="mediaCtrl" ng-src="{{showMe.$getRecord($parent.media).mediaURL}}" width="10%"></div>
+                                    <div ng-controller="mediaCtrl">
+                                        <h3>Add more media</h3>
+                                        <div ng-repeat="image in showMe"><img ng-click="$parent.addContentMedia($parent.showMe.media, image.$id, $parent.$parent.media)" ng-src="{{image.mediaURL}}" width="15%" height="15%" style="float:left"> </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

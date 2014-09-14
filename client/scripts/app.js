@@ -41,6 +41,25 @@
 	      var name, fun;
 	      name = route+'Ctrl';
 	      fun = function($scope, $state, api, $firebase) {
+		      var apiList = [
+			      'updateAbout',
+			      'saveArticle',
+			      'saveService',
+			      'updateServiceTitle',
+			      'updateService',
+			      'saveClient',
+			      'updateClientTitle',
+			      'updateClient',
+			      'saveMedia',
+			      'removeMedia',
+			      'addContentMedia',
+			      'removeContentMedia'
+		      ];
+		      angular.forEach(apiList, function(action){
+			      $scope[action] = api[action];
+			      return $scope;
+
+		      });
 		      $scope.state = $state;
 		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
@@ -49,23 +68,9 @@
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-
-		      $scope.updateAbout = api.updateAbout;
+		      //$scope.updateAbout = api.updateAbout;
 		      $scope.saved = api.aboutSaved;
-
-		      $scope.saveArticle = api.saveArticle;
-
-		      $scope.saveService = api.saveService;
-		      $scope.updateServiceTitle = api.updateServiceTitle;
-		      $scope.updateService = api.updateService;
-
-		      $scope.saveClient = api.saveClient;
-		      $scope.updateClientTitle = api.updateClientTitle;
-		      $scope.updateClient = api.updateClient;
-
-		      $scope.saveMedia = api.saveMedia;
-		      $scope.removeMedia = api.removeMedia;
-
+		      $scope.media = [];
 		      $scope.tags = ['Iron', 'Welding'];
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
