@@ -1,9 +1,9 @@
-<div class="page" data-ng-controller="clientsCtrl">
+<div class="page">
 
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Clients</strong></div>
         <div class="panel-body">
-            <div ng-repeat="client in showMe">
+            <div ng-repeat="client in api.show.clients">
                 <a ng-href="#/clients/{{client.clientURL}}">
                     <h3>{{client.title}}</h3>
                     <p ng-bind-html="client.description"></p>

@@ -1,4 +1,4 @@
-<div class="page" data-ng-controller="aboutCtrl">
+<div class="page" >
 
     <section class="panel panel-default">
 
@@ -37,7 +37,7 @@
             <section class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> About</strong></div>
                 <div class="panel-body">
-                    <div ng-repeat="about in showMe">
+                    <div ng-repeat="about in api.show.about">
                             <p ng-bind-html="about.description"></p>
                     </div>
                 </div>

@@ -1,13 +1,12 @@
-<div class="page" data-ng-controller="articlesCtrl">
+<div class="page" >
 
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Articles</strong></div>
         <div class="panel-body">
-            <div ng-repeat="article in showMe">
+            <div ng-repeat="article in api.show.articles">
                 <a ng-href="#/articles/{{article.articleURL}}">
                     <h3>{{article.title}}</h3>
-                    <code ng-repeat="tag in article.tags">{{tag.text}}</code>
-                    <div ng-repeat="image in article.media"><img ng-controller="mediaCtrl" ng-src="{{showMe.$getRecord($parent.image).mediaURL}}" width="100%">{{image}}</div>
+                    <div ng-repeat="media in article.media"><img ng-src="{{$parent.api.show.media.$getRecord(media).mediaURL}}" width="100%">{{media.mediaURL}}</div>
                     <p ng-bind-html="article.body"></p>
                 </a>
                 <div class="panel-footer">

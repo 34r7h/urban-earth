@@ -80,7 +80,6 @@
 	      app.controller(name, fun);
       };
 			routes.forEach(function(route) {
-				console.log(route+'Ctrl');
 				setControllers(route);
 			});
       setRoutes = function(route) {
@@ -101,9 +100,6 @@
 		  config = {
 			  url: '/'+ singleRoute+ '/:' + singleRoute,
 			  templateUrl: 'views/single/'+ singleRoute + '.html',
-			  data: {
-				  singleData: 'I am that data'
-			  },
 			  controller: function($scope, $state, api, $firebase){
 				  $scope.thisData = $state.current.data;
 				  $scope.state = $state;

@@ -12,7 +12,8 @@ angular.module('app.services', ['firebase'])
 				api.sync[type] = $firebase(api[type]);
 				api.index[type] = new Firebase(indexURL+type);
 				api.sync.index[type] = $firebase(api.index[type]);
-				api.show[type] = api.sync.index[type].$asArray();
+				// makes display object
+				api.show[type] = api.sync[type].$asArray();
 			});
 // Media
 			api.saveMedia = function(id, title){
@@ -37,7 +38,9 @@ angular.module('app.services', ['firebase'])
 
 			};
 			api.addContentMedia = function(content, id, media){
-				console.log(content +' '+id+' '+media);
+				console.log(content);
+				console.log(id);
+				console.log(media);
 				media.push(id);
 			};
 			api.removeContentMedia = function(media, id){

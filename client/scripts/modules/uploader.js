@@ -90,7 +90,6 @@ uploader.provider('AWSControl', function(){
 	              AWS.config.update({accessKeyId: handler.accessKeyId, secretAccessKey: handler.secretAccessKey });
 	              AWS.config.region = handler.region;
 	              AWS.config.host = handler.host;
-	                console.log(AWS);
 	              var bucket = new AWS.S3( { params: {Bucket: handler.Bucket } } );
 
 	              bucket.putObject(params, function (err, data) {
@@ -101,7 +100,6 @@ uploader.provider('AWSControl', function(){
 	                }
 	                else{
 	                    $rootScope.$broadcast('AWSUploadSuccess');
-	                    console.log('https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key) );
 						$rootScope.newImage = 'https://' + AWS.config.host + '-' + AWS.config.region + '.amazonaws.com/' + handler.Bucket +'/'+ encodeURIComponent(key);
 	                    $rootScope.mediaTitle = prompt('Upload Successful! Please name your media.');
 		                $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');

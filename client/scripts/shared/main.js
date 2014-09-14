@@ -20,7 +20,6 @@
         brand: 'Masuk Metal',
         name: 'Bryce Masuk'
       };
-		  $scope.test = api.showMe;
 
       $scope.pageTransitionOpts = [
         {
