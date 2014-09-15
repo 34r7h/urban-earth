@@ -7,10 +7,8 @@
                 </h1>
             </strong>
         </div>
-
+        <img ng-src="{{api.show.media.$getRecord(singleData.media[0]).mediaURL}}" width="100%">
         <p ng-bind-html="singleData.body"></p>
-        <span ng-repeat="tag in singleData.tags">{{tag.text}} </span>
-
     </section>
 
 </div>

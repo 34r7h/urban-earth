@@ -1,9 +1,9 @@
-<div class="page" data-ng-controller="mediaCtrl">
+<div class="page" >
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Media</strong></div>
         <div class="panel-body">
 
-            <div deckgrid class="deckgrid" source="showMe">
+            <div deckgrid class="deckgrid" source="api.show.media">
                 <div class="a-card">
                     <div class="panel panel-default">
                         <div class="panel-heading" >
@@ -20,25 +20,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--div ng-repeat="media in showMe">
-
-
-                            <div class="col-sm-4">
-                                <div class="thumbnail">
-                                    <img alt="" ng-src="{{media.mediaURL}}" height="100">
-                                    <div class="caption">
-                                        <h3>{{media.mediaTitle}}</h3>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                        <p><a href="javascript:;" class="btn btn-primary" role="button">Button</a> <a href="javascript:;" class="btn btn-default" role="button">Button</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-            </div-->
         </div>
     </section>
 

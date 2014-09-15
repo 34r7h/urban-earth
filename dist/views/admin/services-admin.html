@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+    <h2 class="column"> <span class="fa fa-rocket"></span> New Service</h2>
+    <div class="panel-heading">
+        <strong> <span class="fa fa-pencil"></span> Service Title</strong>
+    </div>
+    <div class="panel-body ng-scope">
+        <h1><input type="text" ng-model="serviceTitle" placeholder="New Service Title"/></h1>
+    </div>
+
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong> <span class="fa fa-paint-brush"></span> Service Description</strong></div>
+        <div class="panel-body">
+            <div text-angular="" ng-model="serviceText" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+            <textarea ng-show="showHtml" ta-bind="ta-bind" ng-model="serviceText" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+            </textarea>
+        </div>
+    </section>
+    <section>
+        <button ng-click="saveService(serviceTitle, serviceText)">Save</button>
+    </section>
+    <div class="panel-body">
+        <div ng-repeat="service in api.show.services">
+            <div class="panel-heading" ng-click="editTitle = true">
+                <div ng-hide="editTitle===true">{{service.title}}</div>
+                <input ng-show="editTitle===true" ng-model="service.title" ng-blur="updateServiceTitle(service.$id,service.title);editTitle=false;">
+            </div>
+            <div class="panel-body">
+                <div text-angular="" ng-init="html = service.description;" ng-model="service.description" class="ui-editor ng-isolate-scope ng-pristine ng-valid ta-root"></div>
+                <textarea ng-init="html = service.description" ng-show="showHtml" ta-bind="ta-bind" ng-model="service.description" class="ng-scope ng-isolate-scope ng-pristine ng-valid ta-bind ta-html ta-editor form-control ng-hide">
+                </textarea>
+            </div>
+            <section>
+                <button ng-click="updateService(service.$id, service.description)">Save</button>
+            </section>
+            <div class="panel-footer" ng-init="removeService = false;">
+                <a href ng-show="!removeService" ng-click="removeService = true">Remove Service</a>
+                <a href="javascript:;" ng-show="removeService" ng-click="api.removeService(service.serviceURL, service.$id)" class="btn btn-primary" role="button">Yes, remove this service.</a>
+                <a href="javascript:;" ng-show="removeService" ng-click="removeService = false"class="btn btn-default" role="button">Cancel</a>
+                <p><div>ID:</div><pre>{{service.$id}}</pre></p>
+                <div>URL:</div><pre><code>{{service.serviceURL}}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
