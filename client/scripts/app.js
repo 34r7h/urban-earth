@@ -44,6 +44,7 @@
 		      var apiList = [
 			      'updateAbout',
 			      'saveArticle',
+			      'updateArticleTitle',
 			      'saveService',
 			      'updateServiceTitle',
 			      'updateService',
@@ -119,13 +120,11 @@
 		  return $stateProvider;
 	  };
 
-		  routes.forEach(function(route) {
-	      console.log(route);
+	  routes.forEach(function(route) {
 	      return setRoutes(route);
       });
 
 	  routesSingles.forEach(function(routesSingle) {
-		  console.log(routesSingle);
 		  return setSingleRoutes(routesSingle);
 	  });
 	  return $urlRouterProvider.otherwise('/home');

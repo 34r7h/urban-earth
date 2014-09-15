@@ -111,7 +111,7 @@ angular.module('app.services', ['firebase'])
 				api.aboutSaved = 'About Saved!'
 			};
 // Articles
-			api.saveArticle = function(title, tags, body, media){
+			api.saveArticle = function(title, body, media){
 				var media = media;
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				api.sync.articles.$push({title:title,tags:tags,body:body,media:media,articleURL:articleURL}).then(function (article){
@@ -125,10 +125,16 @@ angular.module('app.services', ['firebase'])
 				});
 
 			};
-			api.updateArticleTitle = function(id, title){
+			api.updateArticleTitle = function(oldURL ,id, title){
+				console.log(id);
+				console.log(title);
 				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.article.$update(id, {title:title, articleURL:link}).then(function(article){
+				console.log(link);
+				api.sync.articles.$update(id, {title:title, articleURL:link}).then(function(article){
+					console.log(article);
 					api.newID = article.name();
+					console.log(api.newID);
+					api.sync.index.articles.$remove(oldURL);
 					api.sync.index.articles.$set(link, api.newID);
 				})
 			};
