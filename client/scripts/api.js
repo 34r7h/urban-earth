@@ -114,7 +114,7 @@ angular.module('app.services', ['firebase'])
 			api.saveArticle = function(title, body, media){
 				var media = media;
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.articles.$push({title:title,tags:tags,body:body,media:media,articleURL:articleURL}).then(function (article){
+				api.sync.articles.$push({title:title,body:body,media:media,articleURL:articleURL}).then(function (article){
 					api.newID = article.name();
 					api.sync.index.articles.$set(articleURL, api.newID);
 				});

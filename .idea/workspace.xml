@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin.html" afterPath="$PROJECT_DIR$/client/views/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/admin.html" afterPath="$PROJECT_DIR$/dist/views/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="$PROJECT_DIR$/dist/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="articles.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4683841" vertical-offset="0" max-vertical-offset="625">
+            <state vertical-scroll-proportion="-7.4074073" vertical-offset="0" max-vertical-offset="625">
               <caret line="8" column="163" selection-start-line="8" selection-start-column="163" selection-end-line="8" selection-end-column="163" />
               <folding />
             </state>
@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1219" max-vertical-offset="1925">
-              <caret line="135" column="43" selection-start-line="135" selection-start-column="43" selection-end-line="135" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5947136" vertical-offset="1180" max-vertical-offset="2100">
+              <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
               <folding>
                 <element signature="e#690#1211#0" expanded="false" />
                 <element signature="e#1251#1383#0" expanded="false" />
@@ -104,8 +104,7 @@
                 <element signature="e#3668#3988#0" expanded="false" />
                 <element signature="e#4038#4106#0" expanded="false" />
                 <element signature="e#4156#4250#0" expanded="false" />
-                <element signature="e#4313#4701#0" expanded="false" />
-                <element signature="e#4743#4853#0" expanded="false" />
+                <element signature="e#4733#4843#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -174,9 +173,9 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/client/views/admin/services-admin.html" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
-        <option value="$PROJECT_DIR$/client/scripts/api.js" />
         <option value="$PROJECT_DIR$/client/views/admin/articles-admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
+        <option value="$PROJECT_DIR$/client/scripts/api.js" />
       </list>
     </option>
   </component>
@@ -550,7 +549,11 @@
       <created>1410765103791</created>
       <updated>1410765103791</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="quick fix for loading new admin views">
+      <created>1410765542165</created>
+      <updated>1410765542165</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -605,7 +608,8 @@
     <MESSAGE value="completed image attachments on new article, add/remove on existing articles, needs some error/duplicate handling" />
     <MESSAGE value="image fix and refactoring code" />
     <MESSAGE value="created separate admin html, easy api for fb items, image fix, article admin tight" />
-    <option name="LAST_COMMIT_MESSAGE" value="created separate admin html, easy api for fb items, image fix, article admin tight" />
+    <MESSAGE value="quick fix for loading new admin views" />
+    <option name="LAST_COMMIT_MESSAGE" value="quick fix for loading new admin views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -935,28 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1219" max-vertical-offset="1925">
-          <caret line="135" column="43" selection-start-line="135" selection-start-column="43" selection-end-line="135" selection-end-column="43" />
-          <folding>
-            <element signature="e#690#1211#0" expanded="false" />
-            <element signature="e#1251#1383#0" expanded="false" />
-            <element signature="e#1957#2324#0" expanded="false" />
-            <element signature="e#2365#2501#0" expanded="false" />
-            <element signature="e#2549#2864#0" expanded="false" />
-            <element signature="e#2913#3019#0" expanded="false" />
-            <element signature="e#3082#3439#0" expanded="false" />
-            <element signature="e#3481#3619#0" expanded="false" />
-            <element signature="e#3668#3988#0" expanded="false" />
-            <element signature="e#4038#4106#0" expanded="false" />
-            <element signature="e#4156#4250#0" expanded="false" />
-            <element signature="e#4313#4701#0" expanded="false" />
-            <element signature="e#4743#4853#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/admin/articles-admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8" vertical-offset="1447" max-vertical-offset="2100">
@@ -1017,9 +999,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4683841" vertical-offset="0" max-vertical-offset="625">
+        <state vertical-scroll-proportion="-7.4074073" vertical-offset="0" max-vertical-offset="625">
           <caret line="8" column="163" selection-start-line="8" selection-start-column="163" selection-end-line="8" selection-end-column="163" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5947136" vertical-offset="1180" max-vertical-offset="2100">
+          <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
+          <folding>
+            <element signature="e#690#1211#0" expanded="false" />
+            <element signature="e#1251#1383#0" expanded="false" />
+            <element signature="e#1957#2324#0" expanded="false" />
+            <element signature="e#2365#2501#0" expanded="false" />
+            <element signature="e#2549#2864#0" expanded="false" />
+            <element signature="e#2913#3019#0" expanded="false" />
+            <element signature="e#3082#3439#0" expanded="false" />
+            <element signature="e#3481#3619#0" expanded="false" />
+            <element signature="e#3668#3988#0" expanded="false" />
+            <element signature="e#4038#4106#0" expanded="false" />
+            <element signature="e#4156#4250#0" expanded="false" />
+            <element signature="e#4733#4843#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
