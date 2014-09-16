@@ -38,6 +38,7 @@ angular.module('app.services', ['firebase'])
 
 			};
 			api.addContentMedia = function(content, id, media){
+				console.log('Begin add media');
 				console.log(content);
 				console.log(id);
 				console.log(media);
@@ -55,9 +56,14 @@ angular.module('app.services', ['firebase'])
 				console.log('so called new media: '+ media);
 			};
 // Clients
-			api.saveClient = function(title, features, description){
+			api.saveClient = function(title, description, media){
+				if(!media){
+					media = '';
+				}
+				this.media = media;
+				console.log('media = '+this.media);
 				var clientURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.clients.$push({title:title,features:features,description:description,clientURL:clientURL}).then(function (client){
+				api.sync.clients.$push({title:title,media:media,description:description,clientURL:clientURL}).then(function (client){
 					api.newID = client.name();
 					api.sync.index.clients.$set(clientURL, api.newID);
 				});
@@ -76,14 +82,14 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.clients.$set(link, api.newID);
 				})
 			};
-			api.updateClient = function(id, description){
-				console.log(id +' '+ description);
-				api.sync.clients.$update(id, {description:description});
+			api.updateClient = function(id, description, media){
+				console.log(id +' '+ description +' '+ media);
+				api.sync.clients.$update(id, {description:description, media:media});
 			};
 // Services
-			api.saveService = function(title, description){
+			api.saveService = function(title, description, media){
 				var serviceURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.services.$push({title:title,description:description,serviceURL:serviceURL}).then(function (service){
+				api.sync.services.$push({title:title,description:description,serviceURL:serviceURL, media:media}).then(function (service){
 					api.newID = service.name();
 					api.sync.index.services.$set(serviceURL, api.newID);
 				});
@@ -102,8 +108,8 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.services.$set(link, api.newID);
 				})
 			};
-			api.updateService = function(id, description){
-				api.sync.services.$update(id, {description:description});
+			api.updateService = function(id, description, media){
+				api.sync.services.$update(id, {description:description, media:media});
 			};
 // About
 			api.updateAbout = function(id, text){
@@ -112,7 +118,9 @@ angular.module('app.services', ['firebase'])
 			};
 // Articles
 			api.saveArticle = function(title, body, media){
-				var media = media;
+				if(!media){
+					var media = media;
+				}
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				api.sync.articles.$push({title:title,body:body,media:media,articleURL:articleURL}).then(function (article){
 					api.newID = article.name();
