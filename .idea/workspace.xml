@@ -1,93 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/css/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/css/weather-icons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/css/weather-icons.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/i18n/resources-locale_zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/Hot_metalwork.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/YJ Lee Gate.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/assets/600_400-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/assets/600_400-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/assets/600_400-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/b1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/b1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/background/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/bg-pattern/bg-pattern9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/g1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/vendor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/img/checkmark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/ui/images/Flags PNG.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/ui/images/flags-s9e6bfd0b60.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/ui/images/flags.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/about-admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/articles-admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/clients-admin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/home-admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/media-admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/admin/services-admin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/articles.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/clients.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/home.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/media.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/nav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/services.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/single/articles.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/single/clients.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/single/media.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/single/services.html" afterPath="" />
+    <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="last minute admin changes">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/background/5.jpg" afterPath="$PROJECT_DIR$/dist/images/background/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/assets/600_400-1.jpg" afterPath="$PROJECT_DIR$/dist/images/assets/600_400-1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/assets/600_400-2.jpg" afterPath="$PROJECT_DIR$/dist/images/assets/600_400-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/ui/images/Flags PNG.zip" afterPath="$PROJECT_DIR$/dist/styles/ui/images/Flags PNG.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/YJ Lee Gate.jpg" afterPath="$PROJECT_DIR$/dist/images/YJ Lee Gate.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.eot" afterPath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.ttf" afterPath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.woff" afterPath="$PROJECT_DIR$/dist/bower_components/weather-icons/font/weathericons-regular-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="$PROJECT_DIR$/dist/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/bootstrap.css" afterPath="$PROJECT_DIR$/dist/styles/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/dist/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -194,8 +128,8 @@
       <file leaf-file-name="clients-admin" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/admin/clients-admin">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111" vertical-offset="575" max-vertical-offset="2025">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state vertical-scroll-proportion="-10.407408" vertical-offset="894" max-vertical-offset="2025">
+              <caret line="47" column="68" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -213,32 +147,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0689654" vertical-offset="1053" max-vertical-offset="2175">
-              <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.68941176" vertical-offset="1257" max-vertical-offset="3250">
+              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
               <folding>
-                <element signature="e#690#1211#0" expanded="false" />
-                <element signature="e#1251#1383#0" expanded="false" />
-                <element signature="e#1620#1922#0" expanded="false" />
-                <element signature="e#2495#2631#0" expanded="false" />
-                <element signature="e#2679#2994#0" expanded="false" />
-                <element signature="e#3663#3801#0" expanded="false" />
-                <element signature="e#3850#4170#0" expanded="false" />
-                <element signature="e#4358#4452#0" expanded="false" />
-                <element signature="e#4958#5068#0" expanded="false" />
-                <element signature="e#5125#5615#0" expanded="false" />
+                <element signature="e#2303#2618#0" expanded="false" />
+                <element signature="e#3580#3900#0" expanded="false" />
+                <element signature="e#4088#4182#0" expanded="false" />
+                <element signature="e#4827#4937#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles-admin.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="articles-admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/admin/articles-admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29274005" vertical-offset="725" max-vertical-offset="2075">
-              <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+            <state vertical-scroll-proportion="-3.7037036" vertical-offset="725" max-vertical-offset="2075">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -314,7 +242,6 @@
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
         <option value="$PROJECT_DIR$/dist/views/about.html" />
         <option value="$PROJECT_DIR$/client/views/about.html" />
-        <option value="$PROJECT_DIR$/client/scripts/api.js" />
         <option value="$PROJECT_DIR$/client/views/admin/clients-admin" />
         <option value="$PROJECT_DIR$/client/views/articles.html" />
         <option value="$PROJECT_DIR$/client/views/clients.html" />
@@ -324,6 +251,7 @@
         <option value="$PROJECT_DIR$/client/views/admin/services-admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin/articles-admin.html" />
+        <option value="$PROJECT_DIR$/client/scripts/api.js" />
       </list>
     </option>
   </component>
@@ -507,6 +435,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rainbow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -667,13 +609,17 @@
       <created>1410829298709</created>
       <updated>1410829298709</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="last minute admin changes">
+      <created>1410829418236</created>
+      <updated>1410829418236</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30703014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -682,7 +628,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -946,40 +892,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0689654" vertical-offset="1053" max-vertical-offset="2175">
-          <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
-          <folding>
-            <element signature="e#690#1211#0" expanded="false" />
-            <element signature="e#1251#1383#0" expanded="false" />
-            <element signature="e#1620#1922#0" expanded="false" />
-            <element signature="e#2495#2631#0" expanded="false" />
-            <element signature="e#2679#2994#0" expanded="false" />
-            <element signature="e#3663#3801#0" expanded="false" />
-            <element signature="e#3850#4170#0" expanded="false" />
-            <element signature="e#4358#4452#0" expanded="false" />
-            <element signature="e#4958#5068#0" expanded="false" />
-            <element signature="e#5125#5615#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/articles.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4814816" vertical-offset="25" max-vertical-offset="625">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/admin/clients-admin">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111" vertical-offset="575" max-vertical-offset="2025">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,10 +960,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/admin/articles-admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29274005" vertical-offset="725" max-vertical-offset="2075">
-          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        <state vertical-scroll-proportion="-3.7037036" vertical-offset="725" max-vertical-offset="2075">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/clients-admin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.407408" vertical-offset="894" max-vertical-offset="2025">
+          <caret line="47" column="68" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68941176" vertical-offset="1257" max-vertical-offset="3250">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+          <folding>
+            <element signature="e#2303#2618#0" expanded="false" />
+            <element signature="e#3580#3900#0" expanded="false" />
+            <element signature="e#4088#4182#0" expanded="false" />
+            <element signature="e#4827#4937#0" expanded="false" />
           </folding>
         </state>
       </provider>
