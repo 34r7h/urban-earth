@@ -113,6 +113,7 @@ angular.module('app.services', ['firebase'])
 				if(!media){
 					media = '';
 				}
+				console.log('yo');
 				this.media = media;
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				api.sync.articles.$push({title:title,body:body,media:media,articleURL:articleURL}).then(function (article){
