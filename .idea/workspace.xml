@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/admin/products-admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/products.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/single/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin.html" afterPath="$PROJECT_DIR$/client/views/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/admin.html" afterPath="$PROJECT_DIR$/dist/views/admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/app.js" afterPath="$PROJECT_DIR$/client/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/app.js" afterPath="$PROJECT_DIR$/dist/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/dist/styles/bootstrap/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/clients.html" afterPath="$PROJECT_DIR$/client/views/single/clients.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/single/clients.html" afterPath="$PROJECT_DIR$/dist/views/single/clients.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home.html" afterPath="$PROJECT_DIR$/client/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/home.html" afterPath="$PROJECT_DIR$/dist/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/nav.html" afterPath="$PROJECT_DIR$/client/views/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/nav.html" afterPath="$PROJECT_DIR$/dist/views/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/single/services.html" afterPath="$PROJECT_DIR$/client/views/single/services.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/single/services.html" afterPath="$PROJECT_DIR$/dist/views/single/services.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/products-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/products-admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -129,8 +113,8 @@
       <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0732323" vertical-offset="1450" max-vertical-offset="3500">
-              <caret line="133" column="44" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+            <state vertical-scroll-proportion="1.8813131" vertical-offset="2107" max-vertical-offset="4557">
+              <caret line="150" column="29" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="29" />
               <folding>
                 <element signature="e#701#1070#0" expanded="false" />
                 <element signature="e#1110#1214#0" expanded="false" />
@@ -150,8 +134,8 @@
       <file leaf-file-name="products-admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/admin/products-admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.481482" vertical-offset="1819" max-vertical-offset="2550">
-              <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
+            <state vertical-scroll-proportion="-4.703704" vertical-offset="1073" max-vertical-offset="2550">
+              <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="79" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -605,15 +589,20 @@
       <created>1410850555603</created>
       <updated>1410850555603</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="installed variations for products">
+      <created>1410989418059</created>
+      <updated>1410989418059</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18794835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -628,7 +617,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -684,7 +672,8 @@
     <MESSAGE value="quick fix for loading new admin views" />
     <MESSAGE value="last minute admin changes" />
     <MESSAGE value="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing." />
+    <MESSAGE value="installed variations for products" />
+    <option name="LAST_COMMIT_MESSAGE" value="installed variations for products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1082,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/admin/products-admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.481482" vertical-offset="1819" max-vertical-offset="2550">
-          <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
+        <state vertical-scroll-proportion="-4.703704" vertical-offset="1073" max-vertical-offset="2550">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -1092,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0732323" vertical-offset="1450" max-vertical-offset="3500">
-          <caret line="133" column="44" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+        <state vertical-scroll-proportion="1.8813131" vertical-offset="2107" max-vertical-offset="4557">
+          <caret line="150" column="29" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="29" />
           <folding>
             <element signature="e#701#1070#0" expanded="false" />
             <element signature="e#1110#1214#0" expanded="false" />

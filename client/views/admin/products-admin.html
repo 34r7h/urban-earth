@@ -46,7 +46,7 @@
                 </textarea>
             </div>
             <div class="panel-body">
-                {{product.variations}}
+                <div ng-repeat="variation in product.variations track by $index" ng-click="api.removeVariation($index, $parent.product.variations)">x {{variation}}</div>
                 <div class="panel panel-default clearfix">
                     <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Variations</strong></div>
                     <div class="panel-body" ng-show="showVariations === true">

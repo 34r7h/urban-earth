@@ -133,7 +133,14 @@ angular.module('app.services', ['firebase'])
 					variations.push({name:variation.name, description:variation.description});
 					console.log(variations);
 				}
-
+			};
+			api.removeVariation = function(index, variations){
+				console.log('index'+index);
+				console.log('variations'+variations);
+				variations.splice(index, 1);
+				if(variations.length === 0){
+					variations[0] = '';
+				}
 			};
 			api.removeProduct = function(name,id){
 				api.sync.products.$remove(id).then(function(){
