@@ -1,0 +1,18 @@
+<div class="page">
+
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Products</strong></div>
+        <div class="panel-body">
+            <div ng-repeat="product in api.show.products">
+                <a ng-href="#/products/{{product.productURL}}">
+                    <h3>{{product.title}}</h3>
+                    <div><img ng-src="{{api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(product.media[0]).mediaURL}}</div>
+                    <p ng-bind-html="product.description"></p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>

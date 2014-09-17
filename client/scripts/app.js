@@ -31,8 +31,8 @@
 		  AWSControlProvider.supportType(imageSupportParams);
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','admin', '404', 'media'];
-      routesSingles = ['services','clients','articles','media'];
+      routes = ['home','about','services','clients','articles','admin', '404', 'media','products'];
+      routesSingles = ['services','clients','articles','media','products'];
 		app.controller = function(name, constructor){
 			$controllerProvider.register(name, constructor);
 			return(this);
@@ -48,13 +48,20 @@
 			      'saveService',
 			      'updateServiceTitle',
 			      'updateService',
+			      'removeService',
+			      'saveProduct',
+			      'updateProductTitle',
+			      'updateProduct',
+			      'removeProduct',
 			      'saveClient',
 			      'updateClientTitle',
 			      'updateClient',
+			      'removeClient',
 			      'saveMedia',
 			      'removeMedia',
 			      'addContentMedia',
-			      'removeContentMedia'
+			      'removeContentMedia',
+			      'addVariation'
 		      ];
 		      angular.forEach(apiList, function(action){
 			      $scope[action] = api[action];
@@ -69,10 +76,9 @@
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
-		      //$scope.updateAbout = api.updateAbout;
 		      $scope.saved = api.aboutSaved;
 		      $scope.media = [];
-		      $scope.tags = ['Iron', 'Welding'];
+			  $scope.productVariations = api.variations;
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };

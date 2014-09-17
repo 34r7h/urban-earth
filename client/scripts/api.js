@@ -4,7 +4,7 @@ angular.module('app.services', ['firebase'])
 
 			var api = {show:{},sync:{index:{}},index:{}};
 
-			var types = ['media','clients','services','articles', 'about'];
+			var types = ['media','clients','services','articles', 'about','products'];
 			var baseURL = 'https://metal.firebaseio.com/';
 			var indexURL = 'https://metal.firebaseio.com/index/';
 			angular.forEach(types, function(type){
@@ -103,6 +103,54 @@ angular.module('app.services', ['firebase'])
 			api.updateService = function(id, description, media){
 				api.sync.services.$update(id, {description:description, media:media});
 			};
+// Products
+			api.saveProduct = function(title, description, variations, media){
+				console.log(variations);
+				if(!media){
+					media = '';
+				}
+				if(!variations){
+					variations = '';
+				}
+				this.media = media;
+				var productURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				console.log(variations);
+				api.sync.products.$push({title:title,description:description, variations: variations, productURL:productURL, media:media}).then(function (product){
+					api.newID = product.name();
+					if(!api.show.products.$getRecord(api.newID).media){
+						api.sync.products.$update(api.newID, {media:['']});
+					}
+					if(!api.show.products.$getRecord(api.newID).variations){
+						api.sync.products.$update(api.newID, {variations:['']});
+					}
+					api.sync.index.products.$set(productURL, api.newID);
+				});
+			};
+			api.addVariation = function(variation, variations){
+				if(variations[0]===''){
+					variations[0]={name:variation.name, description:variation.description};
+				} else {
+					variations.push({name:variation.name, description:variation.description});
+					console.log(variations);
+				}
+
+			};
+			api.removeProduct = function(name,id){
+				api.sync.products.$remove(id).then(function(){
+					api.sync.index.products.$remove(name);
+				});
+
+			};
+			api.updateProductTitle = function(id, title){
+				var link = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
+				api.sync.products.$update(id, {title:title, productURL:link}).then(function(product){
+					api.newID = product.name();
+					api.sync.index.products.$set(link, api.newID);
+				})
+			};
+			api.updateProduct = function(id, description, variations, media){
+				api.sync.products.$update(id, {description:description, variations:variations, media:media});
+			};
 // About
 			api.updateAbout = function(id, text){
 				api.sync.about.$update(id, {description:text});
@@ -113,7 +161,6 @@ angular.module('app.services', ['firebase'])
 				if(!media){
 					media = '';
 				}
-				console.log('yo');
 				this.media = media;
 				var articleURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 				api.sync.articles.$push({title:title,body:body,media:media,articleURL:articleURL}).then(function (article){
