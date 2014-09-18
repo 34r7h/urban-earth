@@ -19,10 +19,13 @@
         <div class="panel panel-default clearfix">
             <div class="panel-heading" ng-click="showVariations = !showVariations"><strong> <span class="fa fa-search"></span> Add Product Variations</strong></div>
             <div class="panel-body" ng-init="productVariations=['No Variations']" ng-show="showVariations === true">
-                <div class="clearfix">
-                    <div class="col-xs-4"><input class="col-xs-12" data-ng-model="newProductVariation.name" placeholder="Variation Title"></div>
-                    <div class="col-xs-8"><textarea class="col-xs-12" data-ng-model="newProductVariation.description" placeholder="Variation Description"></textarea></div>
-                    <button class="col-xs-12 btn clearfix" ng-click="api.addVariation(newProductVariation,productVariations);newProductVariation=[] ">Add Variation</button>
+                <div class="col-xs-12 clearfix">
+                    <div class="form-group">Variation Title: <input class="form-control col-sm-12" data-ng-model="newProductVariation.name"></div>
+                    <div class="form-group">Variation Description:<textarea class="form-control col-sm-12" data-ng-model="newProductVariation.description"></textarea></div>
+                </div>
+                <div class="col-xs-12">
+                    <button class="btn" ng-click="api.addVariation(newProductVariation,productVariations);newProductVariation=[] ">Add Variation
+                    </button>
                 </div>
                 <div class="clearfix" >
                     <table class="table table-bordered" ng-show="productVariations[0]!== 0 && productVariations[0]!=='No Variations'">
@@ -58,8 +61,10 @@
         </div>
     </section>
     <!-- Products -->
-    <h2 class="well"><span class="fa fa-rocket"></span> Products</h2>
-    <div class="panel-body">
+    <h2 class="well" ng-click="showNewProduct = !showNewProduct"><span class="fa fa-rocket"></span> Products</h2>
+    <section ng-show="showNewProduct !== true">
+
+        <div class="panel-body">
         <div ng-repeat="product in api.show.products">
             <!-- TITLE -->
             <h3 class="panel-heading" ng-click="editTitle = true">
@@ -79,7 +84,7 @@
                     <div class="panel-body" ng-show="showVariations === true">
                         <div>Variation Title:</div><input class="col-sm-12" data-ng-model="newProductVariation.name">
                         <div>Variation Description:</div><textarea class="col-sm-12" data-ng-model="newProductVariation.description"></textarea>
-                        <button ng-click="api.addVariation(newProductVariation,product.variations);newProductVariation=[] ">Add Variation</button>
+                        <button ng-click="api.addVariation(newProductVariation,product.variations);newProductVariation=[] ">Add Product Variation</button>
                     </div>
                 </div>
                 <div class="clearfix" >
@@ -135,4 +140,5 @@
             </div>
         </div>
     </div>
+    </section>
 </div>
