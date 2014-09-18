@@ -2,7 +2,7 @@ node_modules
 .tmp
 .sass-cache
 client/bower_components
-.idea/*
+.idea
 .DS_Store
 npm-debug.log
 /preview/preview.zip

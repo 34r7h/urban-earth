@@ -31,6 +31,8 @@ angular.module('app.services', ['firebase'])
 				});
 
 			};
+
+// Add to Content
 			api.addContentMedia = function(content, id, media){
 				media.unshift(id);
 			};
@@ -42,6 +44,37 @@ angular.module('app.services', ['firebase'])
 					}
 				}
 			};
+			api.addContentArticles = function(content, id, articles){
+				if(articles[0]==='No Articles'){
+					articles[0]=id;
+				} else {
+					articles.push(id);
+				}
+			};
+			api.removeContentArticles = function(articles, id){
+				for(var i=0; i< articles.length; i++){
+					if(articles[i] === id){
+						articles.splice(i, 1);  //removes 1 element at position i
+					}
+				}
+				if(articles.length === 0){
+					articles[0] = 'No Articles';
+				}
+			};
+			api.addVariation = function(variation, variations){
+				if(variations[0]==='No Variations'){
+					variations[0]={name:variation.name, description:variation.description};
+				} else {
+					variations.push({name:variation.name, description:variation.description});
+				}
+			};
+			api.removeVariation = function(index, variations){
+				variations.splice(index, 1);
+				if(variations.length === 0){
+					variations[0] = 'No Variations';
+				}
+			};
+
 // Clients
 			api.saveClient = function(title, description, media){
 				if(!media){
@@ -72,17 +105,21 @@ angular.module('app.services', ['firebase'])
 			api.updateClient = function(id, description, media){
 				api.sync.clients.$update(id, {description:description, media:media});
 			};
+
 // Services
-			api.saveService = function(title, description, variations, media){
+			api.saveService = function(title, description, variations, media, articles){
 				if(!media){
 					media = '';
 				}
 				if(!variations){
 					variations = 'No Variations';
 				}
+				if(!articles){
+					articles = 'No Articles';
+				}
 				this.media = media;
 				var serviceURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.services.$push({title:title,description:description,variations: variations, serviceURL:serviceURL, media:media}).then(function (service){
+				api.sync.services.$push({title:title,description:description,variations: variations, serviceURL:serviceURL, media:media, articles:articles}).then(function (service){
 					api.newID = service.name();
 					if(!api.show.services.$getRecord(api.newID).media){
 						api.sync.services.$update(api.newID, {media:['']});
@@ -103,20 +140,26 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.services.$set(link, api.newID);
 				})
 			};
-			api.updateService = function(id, description, variations, media){
-				api.sync.services.$update(id, {description:description, variations:variations, media:media});
+			api.updateService = function(id, description, variations, media, articles){
+				api.sync.services.$update(id, {description:description, variations:variations, media:media, articles:articles});
 			};
 // Products
-			api.saveProduct = function(title, description, variations, media){
+			api.saveProduct = function(title, description, variations, media, articles){
 				if(!media){
-					media = '';
+					var media = [];
+					media[0] = '';
 				}
 				if(!variations){
-					variations = 'No Variations';
+					var variations = [];
+					variations[0] = 'No Variations';
+				}
+				if(!articles){
+					var articles = [];
+					articles[0] = 'No Articles';
 				}
 				this.media = media;
 				var productURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				api.sync.products.$push({title:title,description:description, variations: variations, productURL:productURL, media:media}).then(function (product){
+				api.sync.products.$push({title:title,description:description, variations: variations, productURL:productURL, media:media, articles:articles}).then(function (product){
 					api.newID = product.name();
 					if(!api.show.products.$getRecord(api.newID).media){
 						api.sync.products.$update(api.newID, {media:['']});
@@ -124,21 +167,11 @@ angular.module('app.services', ['firebase'])
 					if(!api.show.products.$getRecord(api.newID).variations){
 						api.sync.products.$update(api.newID, {variations:['']});
 					}
+					if(!api.show.products.$getRecord(api.newID).articles){
+						api.sync.products.$update(api.newID, {articles:['']});
+					}
 					api.sync.index.products.$set(productURL, api.newID);
 				});
-			};
-			api.addVariation = function(variation, variations){
-				if(variations[0]==='No Variations'){
-					variations[0]={name:variation.name, description:variation.description};
-				} else {
-					variations.push({name:variation.name, description:variation.description});
-				}
-			};
-			api.removeVariation = function(index, variations){
-				variations.splice(index, 1);
-				if(variations.length === 0){
-					variations[0] = 'No Variations';
-				}
 			};
 			api.removeProduct = function(name,id){
 				api.sync.products.$remove(id).then(function(){
@@ -153,10 +186,11 @@ angular.module('app.services', ['firebase'])
 					api.sync.index.products.$set(link, api.newID);
 				})
 			};
-			api.updateProduct = function(id, description, variations, media){
-				api.sync.products.$update(id, {description:description, variations:variations, media:media});
+			api.updateProduct = function(id, description, variations, media, articles){
+				api.sync.products.$update(id, {description:description, variations:variations, media:media, articles:articles});
 			};
 // About
+
 			api.updateAbout = function(id, text){
 				api.sync.about.$update(id, {description:text});
 				api.aboutSaved = 'About Saved!'
@@ -193,6 +227,7 @@ angular.module('app.services', ['firebase'])
 			api.updateArticle = function(id, body, media){
 				api.sync.articles.$update(id, {body:body, media:media});
 			};
+
 			return api;
 
 	}]);

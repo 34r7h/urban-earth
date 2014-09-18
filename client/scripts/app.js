@@ -61,7 +61,9 @@
 			      'removeMedia',
 			      'addContentMedia',
 			      'removeContentMedia',
-			      'addVariation'
+			      'addVariation',
+			      'addContentArticles',
+			      'removeContentArticles'
 		      ];
 		      angular.forEach(apiList, function(action){
 			      $scope[action] = api[action];
@@ -78,6 +80,7 @@
 		      $scope.aboutHTML = syncAbout.$asArray();
 		      $scope.saved = api.aboutSaved;
 		      $scope.media = [];
+		      $scope.articles = [];
 			  $scope.productVariations = api.variations;
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
