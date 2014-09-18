@@ -6,8 +6,14 @@
             <div ng-repeat="product in api.show.products">
                 <a ng-href="#/products/{{product.productURL}}">
                     <h3>{{product.title}}</h3>
-                    <div><img ng-src="{{api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%">{{api.show.media.$getRecord(product.media[0]).mediaURL}}</div>
+                    <div><img ng-src="{{api.show.media.$getRecord(product.media[0]).mediaURL}}" width="100%"></div>
                     <p ng-bind-html="product.description"></p>
+                    <div ng-repeat="variation in product.variations" ng-show="product.variations[0]!=='No Variations'">
+                        <div>Variation: {{variation.name}}</div>
+                        <div>Info: {{variation.description}}</div>
+
+                    </div>
+
                 </a>
             </div>
         </div>

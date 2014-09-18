@@ -105,16 +105,14 @@ angular.module('app.services', ['firebase'])
 			};
 // Products
 			api.saveProduct = function(title, description, variations, media){
-				console.log(variations);
 				if(!media){
 					media = '';
 				}
 				if(!variations){
-					variations = '';
+					variations = 'No Variations';
 				}
 				this.media = media;
 				var productURL = title.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-				console.log(variations);
 				api.sync.products.$push({title:title,description:description, variations: variations, productURL:productURL, media:media}).then(function (product){
 					api.newID = product.name();
 					if(!api.show.products.$getRecord(api.newID).media){
@@ -127,19 +125,16 @@ angular.module('app.services', ['firebase'])
 				});
 			};
 			api.addVariation = function(variation, variations){
-				if(variations[0]===''){
+				if(variations[0]==='No Variations'){
 					variations[0]={name:variation.name, description:variation.description};
 				} else {
 					variations.push({name:variation.name, description:variation.description});
-					console.log(variations);
 				}
 			};
 			api.removeVariation = function(index, variations){
-				console.log('index'+index);
-				console.log('variations'+variations);
 				variations.splice(index, 1);
 				if(variations.length === 0){
-					variations[0] = '';
+					variations[0] = 'No Variations';
 				}
 			};
 			api.removeProduct = function(name,id){

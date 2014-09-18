@@ -4,6 +4,7 @@
     <list default="true" id="751ce2eb-922d-4aa8-be83-846e95bab476" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/scripts/api.js" afterPath="$PROJECT_DIR$/client/scripts/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/products-admin.html" afterPath="$PROJECT_DIR$/client/views/admin/products-admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/products.html" afterPath="$PROJECT_DIR$/client/views/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rainbow.iws" />
@@ -103,18 +104,18 @@
       <file leaf-file-name="products.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4705882" vertical-offset="0" max-vertical-offset="575">
-              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            <state vertical-scroll-proportion="-1.7647059" vertical-offset="50" max-vertical-offset="725">
+              <caret line="8" column="109" selection-start-line="8" selection-start-column="109" selection-end-line="8" selection-end-column="109" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8813131" vertical-offset="2107" max-vertical-offset="4557">
-              <caret line="150" column="29" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="29" />
+            <state vertical-scroll-proportion="5.7586207" vertical-offset="2368" max-vertical-offset="4588">
+              <caret line="123" column="48" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="48" />
               <folding>
                 <element signature="e#701#1070#0" expanded="false" />
                 <element signature="e#1110#1214#0" expanded="false" />
@@ -125,17 +126,16 @@
                 <element signature="e#2314#2629#0" expanded="false" />
                 <element signature="e#2685#2765#0" expanded="false" />
                 <element signature="e#3432#3542#0" expanded="false" />
-                <element signature="e#3591#3911#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products-admin.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="products-admin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/views/admin/products-admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.703704" vertical-offset="1073" max-vertical-offset="2550">
-              <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.52380955" vertical-offset="2000" max-vertical-offset="3575">
+              <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -192,7 +192,6 @@
         <option value="$PROJECT_DIR$/client/views/admin/services-admin.html" />
         <option value="$PROJECT_DIR$/client/views/admin/articles-admin.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/client/views/products.html" />
         <option value="$PROJECT_DIR$/client/views/admin.html" />
         <option value="$PROJECT_DIR$/client/views/single/products.html" />
         <option value="$PROJECT_DIR$/client/views/single/services.html" />
@@ -200,8 +199,9 @@
         <option value="$PROJECT_DIR$/client/views/home.html" />
         <option value="$PROJECT_DIR$/client/views/nav.html" />
         <option value="$PROJECT_DIR$/client/scripts/app.js" />
-        <option value="$PROJECT_DIR$/client/views/admin/products-admin.html" />
+        <option value="$PROJECT_DIR$/client/views/products.html" />
         <option value="$PROJECT_DIR$/client/scripts/api.js" />
+        <option value="$PROJECT_DIR$/client/views/admin/products-admin.html" />
       </list>
     </option>
   </component>
@@ -593,7 +593,11 @@
       <created>1410989418059</created>
       <updated>1410989418059</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="remove variations">
+      <created>1410993487231</created>
+      <updated>1410993487231</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <option name="createBranch" value="false" />
     <servers />
   </component>
@@ -601,10 +605,10 @@
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18794835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18794835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15871833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -673,7 +677,8 @@
     <MESSAGE value="last minute admin changes" />
     <MESSAGE value="fixed problem of creating content without media in firebase (empty arrays nulled) now sets [0] = '' then content updater unshifts instead of pushing." />
     <MESSAGE value="installed variations for products" />
-    <option name="LAST_COMMIT_MESSAGE" value="installed variations for products" />
+    <MESSAGE value="remove variations" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove variations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -727,7 +732,6 @@
             <element signature="e#2314#2629#0" expanded="false" />
             <element signature="e#2685#2765#0" expanded="false" />
             <element signature="e#3432#3542#0" expanded="false" />
-            <element signature="e#3591#3911#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1063,26 +1067,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4705882" vertical-offset="0" max-vertical-offset="575">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        <state vertical-scroll-proportion="-1.7647059" vertical-offset="50" max-vertical-offset="725">
+          <caret line="8" column="109" selection-start-line="8" selection-start-column="109" selection-end-line="8" selection-end-column="109" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/admin/products-admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.703704" vertical-offset="1073" max-vertical-offset="2550">
-          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8813131" vertical-offset="2107" max-vertical-offset="4557">
-          <caret line="150" column="29" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="29" />
+        <state vertical-scroll-proportion="5.7586207" vertical-offset="2368" max-vertical-offset="4588">
+          <caret line="123" column="48" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="48" />
           <folding>
             <element signature="e#701#1070#0" expanded="false" />
             <element signature="e#1110#1214#0" expanded="false" />
@@ -1093,7 +1087,16 @@
             <element signature="e#2314#2629#0" expanded="false" />
             <element signature="e#2685#2765#0" expanded="false" />
             <element signature="e#3432#3542#0" expanded="false" />
-            <element signature="e#3591#3911#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/products-admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52380955" vertical-offset="2000" max-vertical-offset="3575">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
