@@ -48,7 +48,15 @@ angular.module('app.services', ['firebase'])
 				if(articles[0]==='No Articles'){
 					articles[0]=id;
 				} else {
-					articles.push(id);
+					var cleanArticles = articles;
+					cleanArticles.push(id);
+					cleanArticles = cleanArticles.filter( function( item, index, inputArray ) {
+						return inputArray.indexOf(item) == index;
+					});
+					console.log('Clean = ' + cleanArticles);
+					articles = cleanArticles;
+					console.log('Articles = '+articles);
+					return articles;
 				}
 			};
 			api.removeContentArticles = function(articles, id){
@@ -147,7 +155,7 @@ angular.module('app.services', ['firebase'])
 			api.saveProduct = function(title, description, variations, media, articles){
 				if(!media){
 					var media = [];
-					media[0] = '';
+					media[0] = 'No Media';
 				}
 				if(!variations){
 					var variations = [];
