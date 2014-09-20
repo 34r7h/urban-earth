@@ -17,7 +17,8 @@
 
 	  'akoenig.deckgrid',
       'uploader']);
-	app.config([
+	app
+		.config([
     '$controllerProvider','$stateProvider', '$urlRouterProvider', 'AWSControlProvider', function($controllerProvider, $stateProvider, $urlRouterProvider, AWSControlProvider) {
 		  var imageSupportParams = {
 			  type           : 'image.*',
@@ -70,11 +71,11 @@
 			      return $scope;
 
 		      });
+
 		      $scope.state = $state;
 		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
-		      $scope.showMe = sync.$asArray();
 		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
@@ -85,6 +86,33 @@
 		      $scope.urlFilter = function(url) {
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
+		      $scope.search = ['JXAr2DW0CX5iRtxd0R3'];
+		      $scope.familes = [{
+			      id: 1,
+			      name: "Kruders",
+			      kids: [{
+				      name: "zoe"
+			      }]
+		      },
+
+			      {
+				      id: 2,
+				      name: "Halifax",
+				      kids: [{
+					      name: "mike"
+				      }, {
+					      name: "jim"
+				      }]
+			      },
+
+			      {
+				      id: 3,
+				      name: "Judes",
+				      kids: [
+
+				      ]
+			      }
+		      ]
 
 	      };
 	      app.controller(name, fun);
@@ -139,7 +167,19 @@
 	  return $urlRouterProvider.otherwise('/home');
 
     }
-  ]);
+  ])
+		.filter('filterOut', function() {
+			return function(input, search) {
+				if (typeof search == "undefined") return input;
+				var filtered = [];
+				angular.forEach(input, function(value) {
+					if (search.indexOf(value.$id) < 0) {
+						filtered.push(value);
+					}
+				});
+				return filtered;
+			};
+	});
 
 }).call(this);
 

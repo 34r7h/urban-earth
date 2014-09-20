@@ -44,6 +44,38 @@ angular.module('app.services', ['firebase'])
 					}
 				}
 			};
+			api.filterOut = function(articles, article, usedIDs){
+				console.log('Filtering');
+				console.log('articles: '+articles);
+				console.log('article: '+ article);
+				console.log('usedIDs: '+ usedIDs);
+				for(var i=0; i<usedIDs.length; i++){
+					if(usedIDs[i] === article){
+						articles.splice(article,1);
+					}
+				}
+				return articles;
+			};
+			/*
+			api.showArticles = function(allArticles, usedArticles){
+				var newArticles = [];
+				console.log(allArticles);
+				console.log(usedArticles);
+				angular.forEach(allArticles, function(article, key){
+					console.log('article');
+					console.log(article);
+					angular.forEach(usedArticles, function(usedArticle){
+						console.log('usedArticle');
+						console.log(usedArticle);
+						if(article && article.$id===usedArticle){
+							newArticles.push(article.$id);
+						}
+					});
+				});
+				console.log(newArticles);
+				return newArticles;
+			};
+			*/
 			api.addContentArticles = function(content, id, articles){
 				if(articles[0]==='No Articles'){
 					articles[0]=id;
