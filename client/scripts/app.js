@@ -71,7 +71,6 @@
 			      return $scope;
 
 		      });
-
 		      $scope.state = $state;
 		      $scope.api = api;
 		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
@@ -87,33 +86,6 @@
 			      return url.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 		      };
 		      $scope.search = ['JXAr2DW0CX5iRtxd0R3'];
-		      $scope.familes = [{
-			      id: 1,
-			      name: "Kruders",
-			      kids: [{
-				      name: "zoe"
-			      }]
-		      },
-
-			      {
-				      id: 2,
-				      name: "Halifax",
-				      kids: [{
-					      name: "mike"
-				      }, {
-					      name: "jim"
-				      }]
-			      },
-
-			      {
-				      id: 3,
-				      name: "Judes",
-				      kids: [
-
-				      ]
-			      }
-		      ]
-
 	      };
 	      app.controller(name, fun);
       };

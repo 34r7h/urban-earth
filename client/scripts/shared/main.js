@@ -2,7 +2,9 @@
   'use strict';
   angular.module('app.controllers', []).controller('AppCtrl', [
     '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', function($scope, $rootScope, $firebase, api, $http, AWSControl) {
-	  $scope.msg = '';
+		  $scope.preventClose = function(event) { event.stopPropagation(); };
+
+		  $scope.msg = '';
 
 	  console.log(AWSControl);
 	  $scope.fromservice = AWSControl.yeah; //no use
