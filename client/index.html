@@ -51,7 +51,7 @@
             <section ui-view
                      id="content"
                      class="content-container test {{admin.pageTransition.class}}"></section>
-            <img src="images/metal-footer.jpg" width="100%" height="auto">
+            <img src="{{api.show.site.$getRecord('footerImage').$value}}" width="100%" height="auto">
         </div>
 
 

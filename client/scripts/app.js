@@ -32,7 +32,7 @@
 		  AWSControlProvider.supportType(imageSupportParams);
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','admin', '404', 'media','products'];
+      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site'];
       routesSingles = ['services','clients','articles','media','products'];
 		app.controller = function(name, constructor){
 			$controllerProvider.register(name, constructor);

@@ -3,7 +3,7 @@
   angular.module('app.controllers', []).controller('AppCtrl', [
     '$scope', '$rootScope', '$firebase', 'api', '$http', 'AWSControl', function($scope, $rootScope, $firebase, api, $http, AWSControl) {
 		  $scope.preventClose = function(event) { event.stopPropagation(); };
-
+$scope.api = api;
 		  $scope.msg = '';
 
 	  console.log(AWSControl);
