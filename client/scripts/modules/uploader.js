@@ -35,7 +35,6 @@ var uploader = angular.module('uploader', []);
 
 uploader.provider('AWSControl', function(){
   var mimes = [];
-  this.yeah = 'Hi';  
 
   this.supportType = function(params){
     /*
@@ -48,11 +47,9 @@ uploader.provider('AWSControl', function(){
     mimes.push(params);    
   };
 
-  this.setYeah = function(yeah){ this.yeah = yeah; };
 
   this.$get = function($q, $rootScope, $firebase, api){
       return {
-          yeah: this.yeah,
           mimes: mimes,
           canHandle: function(fileType){
                         var canBeHandled = false;

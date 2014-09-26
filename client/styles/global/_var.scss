@@ -17,12 +17,12 @@ $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
-$brand-primary:         #248AAF !default;
+$brand-primary:         rgba(245, 28, 45, 1) !default;
 $brand-success:         #3CBC8D !default;
-$brand-info:            #29B7D3 !default;
+$brand-info:            #30a79a !default;
 $brand-info-alt:        #666699 !default;
-$brand-warning:         #FAC552 !default;
-$brand-danger:          #E9422E !default;
+$brand-warning:         #fb7b1d !default;
+$brand-danger:          #cb0211 !default;
 
 $color-orange:          #EF9549;
 $color-violet:          $brand-info-alt;
@@ -47,7 +47,7 @@ $state-default-border-light:    #f3f3f3;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #f3f3f3 !default;
+$body-bg:               #808083 !default;
 //** Global text color on `<body>`.
 $text-color:            #767676 !default;
 

@@ -7,7 +7,6 @@ $scope.api = api;
 		  $scope.msg = '';
 
 	  console.log(AWSControl);
-	  $scope.fromservice = AWSControl.yeah; //no use
 	  $scope.myfile = {};
 	  $rootScope.$on('AWSUploadSuccess', function(){
 		  $scope.msg = 'Upload successful';
@@ -69,12 +68,12 @@ $scope.api = api;
         }
       }, true);
       return $scope.color = {
-        primary: '#248AAF',
+        primary: 'rgba(245, 28, 45, 1)',
         success: '#3CBC8D',
-        info: '#29B7D3',
+        info: '#028174',
         infoAlt: '#666699',
         warning: '#FAC552',
-        danger: '#E9422E'
+        danger: '#cb0211'
       };
     }
   ]).controller('HeaderCtrl', ['$scope', function($scope) {}]).controller('NavContainerCtrl', ['$scope', function($scope) {}]).controller('NavCtrl', [
