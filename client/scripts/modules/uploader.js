@@ -102,7 +102,7 @@ uploader.provider('AWSControl', function(){
 		                $rootScope.mediaTitle = $rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
 
 /* beginning of self-called check on path availablility
-						 var index = new Firebase("https://metal.firebaseio.com/index/media");
+						 var index = new Firebase("https://urban.firebaseio.com/index/media");
 						 var sync = $firebase(index);
 						 var mediaIndex = sync.$asObject();
 						 console.log(mediaIndex);
@@ -117,11 +117,11 @@ uploader.provider('AWSControl', function(){
 		                })();
 */
 	                    console.log($rootScope.newImage + ' ' + $rootScope.newImage);
-	                    var media = new Firebase("https://metal.firebaseio.com/media");
+	                    var media = new Firebase("https://urban.firebaseio.com/media");
 	                    var sync = $firebase(media);
 	                    sync.$push({mediaURL:$rootScope.newImage, mediaTitle:$rootScope.mediaTitle, mediaLink:$rootScope.mediaTitle.toLowerCase().replace(/'+/g, '').replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '')}).then(function (media){
 		                    var newID = media.name();
-		                    var index = new Firebase("https://metal.firebaseio.com/index/media");
+		                    var index = new Firebase("https://urban.firebaseio.com/index/media");
 		                    var sync = $firebase(index);
 		                    sync.$set($rootScope.mediaTitle,newID);
 	                    });

@@ -23,7 +23,7 @@
 		  var imageSupportParams = {
 			  type           : 'image.*',
 			  host           : 's3',
-			  Bucket         : 'masuk',
+			  Bucket         : 'urban-earth',
 			  accessKeyId    : 'AKIAIABNWCTWZ65JJV4A',
 			  secretAccessKey: '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',
 			  region         : 'us-west-2'
@@ -32,8 +32,8 @@
 		  AWSControlProvider.supportType(imageSupportParams);
 
       var routes, setControllers, setRoutes, routesSingles, setSingleRoutes;
-      routes = ['home','about','services','clients','articles','admin', '404', 'media','products', 'contact', 'site'];
-      routesSingles = ['services','clients','articles','media','products'];
+      routes = ['media','teas','specials','programmes','home','about','articles','admin', '404', 'contact', 'site'];
+      routesSingles = ['teas','specials','programmes','articles','media','products'];
 		app.controller = function(name, constructor){
 			$controllerProvider.register(name, constructor);
 			return(this);
@@ -73,9 +73,9 @@
 		      });
 		      $scope.state = $state;
 		      $scope.api = api;
-		      var itemList = new Firebase("https://metal.firebaseio.com/"+route);
+		      var itemList = new Firebase("https://urban.firebaseio.com/"+route);
 		      var sync = $firebase(itemList);
-		      var aboutText = new Firebase("https://metal.firebaseio.com/about");
+		      var aboutText = new Firebase("https://urban.firebaseio.com/about");
 		      var syncAbout = $firebase(aboutText);
 		      $scope.aboutHTML = syncAbout.$asArray();
 		      $scope.saved = api.aboutSaved;
@@ -114,10 +114,10 @@
 				  $scope.thisData = $state.current.data;
 				  $scope.state = $state;
 				  $scope.api = api;
-				  var ref = new Firebase("https://metal.firebaseio.com/index/"+singleRoute+"/"+$scope.state.params[singleRoute]);
+				  var ref = new Firebase("https://urban.firebaseio.com/index/"+singleRoute+"/"+$scope.state.params[singleRoute]);
 				  ref.on('value', function (snapshot) {
 					  var itemID = snapshot.val();
-					  var itemRef = new Firebase("https://metal.firebaseio.com/"+singleRoute+"/"+itemID);
+					  var itemRef = new Firebase("https://urban.firebaseio.com/"+singleRoute+"/"+itemID);
 					  var sync = $firebase(itemRef);
 					  $scope.singleData = sync.$asObject();
 				  }, function (errorObject) {

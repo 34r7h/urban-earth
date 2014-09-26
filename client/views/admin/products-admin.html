@@ -89,12 +89,12 @@
             <button class="btn btn-behance col-xs-12" ng-click="saveProduct(productTitle, productText, productVariations, media, articles, price)"><h3><span class="fa fa-cloud-upload"></span> Save New Product</h3></button>
         </div>
     </section>
-    <!-- Products -->
-    <h2 class="well" ng-click="showNewProduct = !showNewProduct"><span class="fa fa-rocket"></span> Products</h2>
+    <!-- teas -->
+    <h2 class="well" ng-click="showNewProduct = !showNewProduct"><span class="fa fa-rocket"></span> teas</h2>
     <section ng-show="showNewProduct !== true">
 
         <div class="panel-body">
-        <div ng-repeat="product in api.show.products">
+        <div ng-repeat="product in api.show.teas">
             <!-- TITLE -->
             <h3 class="panel-heading" ng-click="editTitle = true">
                 <div ng-hide="editTitle===true">Product: {{product.title}}</div>

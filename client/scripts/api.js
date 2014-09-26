@@ -4,9 +4,9 @@ angular.module('app.services', ['firebase'])
 
 			var api = {show:{},sync:{index:{}},index:{}};
 
-			var types = ['media','clients','services','articles', 'about','products','contact','site'];
-			var baseURL = 'https://metal.firebaseio.com/';
-			var indexURL = 'https://metal.firebaseio.com/index/';
+			var types = ['media','teas','specials','articles', 'about','programmes','contact','site'];
+			var baseURL = 'https://urban.firebaseio.com/';
+			var indexURL = 'https://urban.firebaseio.com/index/';
 			angular.forEach(types, function(type){
 				api[type] = new Firebase(baseURL+type);
 				api.sync[type] = $firebase(api[type]);

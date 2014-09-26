@@ -18,8 +18,8 @@ $scope.api = api;
       var $window;
       $window = $(window);
       $scope.main = {
-        brand: 'Masuk Metal',
-        name: 'Bryce Masuk'
+        brand: 'Urban Earth Teas',
+        name: 'Mara Jade'
       };
 
       $scope.pageTransitionOpts = [
@@ -39,7 +39,7 @@ $scope.api = api;
       ];
       $scope.admin = {
         layout: 'wide',
-        menu: 'vertical',
+        menu: 'horizontal',
         fixedHeader: true,
         fixedSidebar: true,
         pageTransition: $scope.pageTransitionOpts[2]
